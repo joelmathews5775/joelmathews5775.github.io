@@ -86,8 +86,24 @@ footer > p {
     padding: 12px 0;
     text-align: center;
 }
-footer a {
+footer a:link {
     text-decoration: underline;
     color: #ffffff;
+}
+footer a:visited {
+    text-decoration: underline;
+    color: #ffffff;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #20fc8f;
+}
+footer a:focus {
+    text-decoration: underline;
+    color: #20fc8f;
+}
+footer a:active {
+    text-decoration: underline;
+    color: #5adbff;
 }
 
