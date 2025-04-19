@@ -67,7 +67,7 @@ main {
     font-size: 1em;
 }
 main > div {
-    background-color: #fdc500;
+    background-color: #ffda48;;
     padding: 20px 0;
 } 
 p {
@@ -81,6 +81,7 @@ p a:link {
 }
 p a:visited {
     text-decoration: underline;
+    color: #094074;
 }
 p a:hover {
     text-decoration: underline;
