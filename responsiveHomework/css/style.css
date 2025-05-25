@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+p, li, a {
+    font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+}
+
+div{
+    display: inline-block;
+    width: 95%;
+    margin: 5px 0;
+    padding: 2px;
+}
+
+div img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    border: 7px solid blue;
+    border-radius: 30px;
+}
+
+div p{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 772px) {
+    
+    div {
+        width: 45%;
+    }
+    div img {
+        height: 200px;
+        max-height: 30%;
+    }
+    
+}
+
+@media screen and (min-width: 998px) {
+    div {
+        width: 30%;
+    }
+}
