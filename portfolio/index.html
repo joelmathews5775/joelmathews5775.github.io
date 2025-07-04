@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JM - Home</title>
+  <link rel="icon" href="img/favicon_32x32_blue.svg" type="image/x-icon" media="prefers-color-scheme: light">
+  <link rel="icon" href="img/favicon_32x32_green.svg" type="image/x-icon" media="prefers-color-scheme: dark">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="css-header js-header">
+    <div class="css-icon-background">
+      <a href="index.html" class="css-home js-home">
+        <picture>
+          <source srcset="img/logo_136x60_blue.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" width="40" height="auto">
+          <source srcset="img/logo_136x60_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="40" height="auto">
+          <img src="img/logo_136x60_blue.svg" alt="Brand logo." width="40" height="auto">
+        </picture>
+      </a>
+    </div>
+    <div class="css-icon-background">
+      <button class="css-menu js-menu">
+        <picture>
+          <source srcset="img/menu_23x18_blue.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" width="22" height="auto">
+          <source srcset="img/menu_23x18_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="22" height="auto">
+          <img src="img/menu_23x18_blue.svg" alt="Menu icon." width="22" height="auto">
+        </picture>
+        <button class="css-close js-close hide">
+          <picture>
+            <source srcset="img/close_19x19_blue.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" width="16" height="auto">
+            <source srcset="img/close_19x19_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="16" height="auto">
+            <img src="img/close_19x19_blue.svg" alt="Menu icon." width="16" height="auto">
+          </picture>
+        </button>
+      </button>
+    </div>
+  </header>
+  <nav class="css-mobile-nav js-mobile-nav hide">
+    <ul class="css-mobile-nav-list">
+      <li class="css-mobile-nav-items css-mobile-nav-items-active">
+        <a href="#hero" class="css-mobile-nav-links css-mobile-nav-links-active">Home</a>
+      </li>
+      <li class="css-mobile-nav-items">
+        <a href="#about" class="css-mobile-nav-links">About</a>
+      </li>
+      <li class="css-mobile-nav-items">
+        <a href="#skills" class="css-mobile-nav-links">Skills</a>
+      </li>
+      <li class="css-mobile-nav-items">
+        <a href="#projects" class="css-mobile-nav-links">Projects</a>
+      </li>
+      <li class="css-mobile-nav-items">
+        <a href="#contact" class="css-mobile-nav-links">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section id="hero" class="css-hero-section">
+      <div class="css-hero-wrapper">
+        <h1>Hi, I'm<br><span class="css-colored-text">Joel Mathews</span></h1>
+      <p class="css-bigger-text">Aspriring Frontend Developer</p>
+      <p class="css-centered-text">Passionate about creating beautiful, user-<br>friendly web experiences. Currently<br>learning React, JavaScript and modern<br>web technologies to bring ideas to life.</p>
+      <a href="#about" class="css-button-link css-about-link">Learn More About Me</a>
+      <a href="#contact" class="css-button-link css-contact-link">Get In Touch</a>
+      <a href="#about">
+        <img src="img/down_arrow_20x23_black.svg" alt="Down arrow">
+      </a>
+      </div>
+    </section>
+    <!-- <section id="about">
+      <div class="css-about-wrapper">
+        <h2>About Me</h2>
+      </div>
+    </section> -->
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
