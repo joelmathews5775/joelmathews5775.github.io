@@ -133,6 +133,7 @@ body {
 }
 .css-hero-section {
   width: 90%;
+  height: 100vh;
   background-color: var(--light-hover-color);
   display: flex;
   flex-direction: column;
