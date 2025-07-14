@@ -203,26 +203,29 @@ body {
   align-items: center; 
   /* border: 1px solid black; */
 }
-.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .likendin-link-background {
+.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .likendin-link-background, .send-message-button-background {
   background-color: var(--light-primary-color);
 }
 .contact-link-background, .source-link-background {
   background-color: var(--light-background-color);
   border: 3px solid var(--light-primary-color);
 }
-.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link {
+.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
   width: 100%;
   height: 3.25rem;
   text-decoration: none;
+  font-family: Montserrat;
   font-size: 1rem;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background-color: transparent;
   /* -webkit-tap-highlight-color: transparent; */
   /* border: 1px solid black; */
 }
-.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .linkedin-link {
+.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
   color: var(--light-background-color);
 }
 .contact-link, .source-link {
@@ -427,7 +430,7 @@ body {
   /* justify-content: space-between; */
   align-items: center;
   overflow: hidden;
-  border: 1px solid var(--dark-hover2-color);
+  border: 1px solid #a0a0a0;
   margin-bottom: 2.5rem;
 }
 .project-preview-image-background {
@@ -468,15 +471,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1.563rem;
 }
-.contact-details-container {
+.contact-details-container, .message-form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 7.5px;
   box-shadow: var(--light-box-shadow);
   /* border: 1px solid black; */
+   margin-bottom: 1.563rem;
 }
 .contact-email-container, .contact-phone-container, .contact-location-container {
   width: 100%;
@@ -501,10 +505,10 @@ body {
 }
 .contact-label, .contact-detail {
   font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 7.5px;
+  font-weight: 800;
+  margin-bottom: 0.469rem;
 }
-.email, .phone, .location  {
+.email-id, .phone-no, .location  {
   color: var(--light-primary-color)
 }
 .contact-text {
@@ -514,13 +518,58 @@ body {
 .social-container {
   width: 100%;
 }
-/* .footer{
+.message-form {
+  width: 90%;
+  height: auto;
+}
+.form-labels {
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.469rem;
+}
+.form-fields {
   width: 100%;
-  height: 500px;
-}  */
+  height: 3.25rem;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid var(--dark-hover2-color);
+  font-family: Montserrat;
+  font-size: 1rem;
+  margin-bottom: 1.563rem;
+}
+.name-field, .email-field {
+  padding-left: 0.625rem;
+}
+.message-field {
+  height: 12.5rem;
+  padding: 0.625rem;
+}
+.footer{
+  width: 100%;
+  height: auto;
+  background-color: #090912;
+  color: var(--light-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+.footer-text {
+  color: var(--light-background-color)
+}
 .hide {
   display: none;
 }
+
+/* @media only screen and (min-width: 375px) {
+}
+
+@media only screen and (min-width: 430px) {
+  
+}
+
+@media only screen and (min-width: 768px) {
+  
+} */
 
 @media only screen and (min-width: 1024px) {
   .menu-background, .close-background {
