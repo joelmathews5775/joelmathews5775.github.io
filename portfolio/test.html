@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --light-hover-color: #EFF6FF;
+    --dark-hover-color: #363636;
+    --light-hover2-color: #e1e1e1;
+    --dark-hover2-color:  #505050;
+    --light-background-color: #FFFFFF;
+    --dark-background-color: #202020;
+    --dark-text-color: #000000;
+    --light-primary-color: #0559A7;
+    --light-primary-active-color: #0b356e;  
+    --dark-primary-color: #01EC70;
+    --light-border-color: #a0a0a0;
+    --light-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    --dark-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
+    --website-font: Montserrat, Arial, sans-serif;
+    --progress-bar-color: #D9D9D9;
+    
+  }
+  .horizontal-container {
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+  .email-icon-background, .phone-icon-background, .location-icon-background {
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: var(--light-hover-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.563rem;
+  }
+  </style>
+</head>
+<body>
+<div class="horizontal-container">
+  <div class="email-icon-background">
+    <img src="img/email_30x24_blue.svg" alt="Blue Message Icon." width="24" height="auto">
+  </div>
+  <div class="phone-icon-background">
+    <img src="img/phone_25x25_blue.svg" alt="Blue Phone Icon." width="21" height="auto">
+  </div>
+  <div class="location-icon-background">
+    <img src="img/location_25x32_blue.svg" alt="Blue Location Icon." width="20" height="auto">
+  </div>
+</div>
+</body>
+</html>
