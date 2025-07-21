@@ -6,23 +6,33 @@
   <title>JM - Frontend Developer</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon_32x32_blue.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon_32x32_green.svg" type="image/x-icon" media="(prefers-color-scheme: dark)">
 </head>
 <body>
   <header class="header">
     <div class="header-contents-container">
       <div class="header-icon-background">
         <a href="index.html" class="home-link">
-          <img src="img/logo_40x40_blue.svg" alt="Blue colored JM brand logo." width="40" height="40">
+          <picture class="picture">
+            <source srcset="img/logo_40x40_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="40" height="40">
+            <img src="img/logo_40x40_blue.svg" alt="JM brand logo." width="40" height="40">
+          </picture>
         </a>
       </div>
       <div class="header-icon-background menu-background">
         <button class="open-menu-button">
-          <img src="img/menu_23x18_blue.svg" alt="Blue colored hamburger menu icon." width="16.5" height="40">
+          <picture class="picture">
+            <source srcset="img/menu_23x18_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="16.5" height="40">
+            <img src="img/menu_23x18_blue.svg" alt="Open hamburger menu icon." width="16.5" height="40">
+          </picture>
         </button>
       </div>
       <div class="header-icon-background close-background hide">
         <button class="close-menu-button">
-          <img src="img/close_19x19_blue.svg" alt="Blue colored close menu icon." width="12" height="40">
+          <picture class="picture">
+            <source srcset="img/close_19x19_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="12" height="40">
+            <img src="img/close_19x19_blue.svg" alt="Close hamburger menu icon." width="12" height="40">
+          </picture>
         </button>
       </div>
       <nav class="desktop-nav">
@@ -73,10 +83,22 @@
         <p class="paragraph hero-paragraph">Passionate about creating beautiful, user-friendly web experiences. Currently learning React and other modern web technologies to bring ideas to life.</p>
         <div class="link-buttons hero-link-buttons">
           <div class="link-button-background about-link-background">
-            <a href="#about" class="about-link"><img src="img/down_arrow_18x20_white.svg" alt="White colored down arrow icon." width="12">&nbsp;&nbsp;Learn More About Me</a>
+            <a href="#about" class="about-link">
+              <picture class="picture">
+                <source srcset="img/down_arrow_18x20_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="12" height="13.33">
+                <img src="img/down_arrow_18x20_white.svg" alt="Down navigation arrow icon." width="12" height="13.33">
+              </picture> 
+              &nbsp;&nbsp;Learn More About Me
+            </a>
           </div>
           <div class="link-button-background contact-link-background">
-            <a href="#contact" class="contact-link"><img src="img/message_22x22_blue.svg" alt="Blue colored message icon." width="16">&nbsp;&nbsp;Get In Touch</a>
+            <a href="#contact" class="contact-link">
+              <picture class="picture">
+                <source srcset="img/message_22x22_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="17" height="17">
+                <img src="img/message_22x22_blue.svg" alt="Message conversation icon." width="17" height="17" class="message-icon">
+              </picture>
+              &nbsp;&nbsp;Get In Touch
+            </a>
           </div>
         </div>
       </div>
@@ -86,40 +108,58 @@
         <h2 class="heading2 about-main-heading">About Me</h2>
         <p class="paragraph about-main-paragraph">I'm on an exciting journey to become a skilled frontend developer, driven by curiosity and a passion for creating digital experiences.</p>
         <h3 class="heading3 about-main-sub-heading">My Journey</h3>
-        <p class="paragraph about-main-sub-paragraphs justified-paragraph">I discovered my passion for web development through curiosity about how website work. What started as tinkering with HTML and CSS has evolved into a  dedicated pursuit of frontend development mastery.</p>
-        <p class="paragraph about-main-sub-paragraphs justified-paragraph">Currently, I'm immersing myself in modern JavaScript frameworks, responsive design principles and user experience best practices. Every project is an opportunity to learn something new and push my boundaries.</p>
-        <p class="paragraph about-main-sub-paragraphs justified-paragraph">I'm excited about the endless possibilities in web development and look forward to contributing to teams that value innovation, quality, and continuous improvement.</p>
+        <p class="paragraph about-main-sub-paragraphs">I discovered my passion for web development through curiosity about how website work. What started as tinkering with HTML and CSS has evolved into a  dedicated pursuit of frontend development mastery.</p>
+        <p class="paragraph about-main-sub-paragraphs">Currently, I'm immersing myself in modern JavaScript frameworks, responsive design principles and user experience best practices. Every project is an opportunity to learn something new and push my boundaries.</p>
+        <p class="paragraph about-main-sub-paragraphs">I'm excited about the endless possibilities in web development and look forward to contributing to teams that value innovation, quality, and continuous improvement.</p>
         <div class="link-buttons about-link-buttons">
           <div class="link-button-background resume-link-background">
-            <a href="" class="resume-link"><img src="img/download_20x23_white.svg" alt="White colored download icon." width="13.5">&nbsp;&nbsp;Download Resume</a>
+            <a href="others/JOEL MATHEWS FINAL.pdf" download class="resume-link">
+              <picture class="picture">
+                <source srcset="img/download_20x23_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="13.5" height="15.53">
+                <img src="img/download_20x23_white.svg" alt="Download file icon." width="13.5" height="15.53">
+              </picture>
+              &nbsp;&nbsp;Download Resume
+            </a>
           </div>
         </div>
       </div>
       <div class="about-extras-container">
         <div class="about-extras-info">
           <div class="about-extras-info-icon-background">
-            <img src="img/code_33x31_white.svg" alt="White HTML Tag Icon." width="25" height="auto">
+            <picture class="picture">
+              <source srcset="img/code_33x31_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="25" height="22.75">
+              <img src="img/code_33x31_white.svg" alt="HTML tag icon." width="25" height="22.75">
+            </picture>
           </div>
           <h4 class="heading4 about-extras-heading">Clean Code</h4>
           <p class="paragraph about-extras-paragraph">I believe in writing readable, maintainable code that follows best practices.</p>
         </div>
         <div class="about-extras-info">
           <div class="about-extras-info-icon-background">
-            <img src="img/light_bulb_24x33_white.svg" alt="White Light Bulb Icon." width="17" height="auto">
+            <picture class="picture">
+              <source srcset="img/light_bulb_24x33_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="17" height="23.91">
+              <img src="img/light_bulb_24x33_white.svg" alt="Light bulb icon." width="17" height="23.91">
+            </picture>
           </div>
           <h4 class="heading4 about-extras-heading">Continuous Learning</h4>
           <p class="paragraph about-extras-paragraph">Always exploring new technologies and staying current with industry trends.</p>
         </div>
         <div class="about-extras-info">
           <div class="about-extras-info-icon-background">
-            <img src="img/users_34x29_white.svg" alt="White Users Icon." width="24" height="auto">
+            <picture class="picture">
+              <source srcset="img/users_34x29_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="24" height="20.41">
+              <img src="img/users_34x29_white.svg" alt="Social users icon." width="24" height="20.41">
+            </picture>
           </div>
           <h4 class="heading4 about-extras-heading">User-Centered</h4>
           <p class="paragraph about-extras-paragraph">Focused on creating intuitive experiences that users love to interact with.</p>
         </div>
         <div class="about-extras-info">
           <div class="about-extras-info-icon-background">
-            <img src="img/goal_33x33_white.svg" alt="White Aim Board Icon." width="23">
+            <picture class="picture">
+              <source srcset="img/goal_33x33_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="23" height="23">
+              <img src="img/goal_33x33_white.svg" alt="Aim board icon." width="23" height="23">
+            </picture>
           </div>
           <h4 class="heading4 about-extras-heading">Goal-Oriented</h4>
           <p class="paragraph about-extras-paragraph">Committed to delivering projects on time and exceeding expectations.</p>
@@ -218,9 +258,6 @@
               <p class="concept">React</p>
             </div> 
             <div class="learnings">
-              <p class="concept">TypeScript</p>
-            </div>
-            <div class="learnings">
               <p class="concept">UI/UX</p>
             </div>
           </div>
@@ -238,10 +275,22 @@
             <p class="paragraph project-main-sub-paragraph">A responsive portfolio website built with HTML, CSS & JavaScript, showcasing my journey and projects as a fronend developer.</p>
             <div class="link-buttons projects-link-buttons">
               <div class="link-button-background preview-link-background">
-                <a href="" class="preview-link"><img src="img/live_preview_30x30_white.svg" alt="White colored new tab icon." width="20">&nbsp;&nbsp;Live Preview</a>
+                <a href="" class="preview-link">
+                  <picture class="picture">
+                    <source srcset="img/live_preview_22x22_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="17" height="17">
+                    <img src="img/live_preview_22x22_white.svg" alt="Open new tab icon." width="17" height="17">
+                  </picture>  
+                  &nbsp;&nbsp;Live Preview
+                </a>
               </div>
               <div class="link-button-background source-link-background">
-                <a href="" class="source-link"><img src="img/code_28x25_blue.svg" alt="Blue colored HTML tag icon." width="20">&nbsp;&nbsp;Source Code</a>
+                <a href="" class="source-link">
+                  <picture class="picture">
+                    <source srcset="img/code_24x22_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="18.5" height="16.94">
+                    <img src="img/code_24x22_blue.svg" alt="HTML tag icon." width="18.5" height="16.94">
+                  </picture>
+                  &nbsp;&nbsp;Source Code
+                </a>
               </div>
             </div>
           </div>
@@ -253,22 +302,42 @@
             <p class="paragraph project-main-sub-paragraph">A responsive online web store built with HTML, CSS & JavaScript for showcasing and selling personal projects.</p>
             <div class="link-buttons projects-link-buttons">
               <div class="link-button-background preview-link-background">
-                <a href="" class="preview-link"><img src="img/live_preview_30x30_white.svg" alt="White colored new tab icon." width="20">&nbsp;&nbsp;Live Preview</a>
+                <a href="" class="preview-link">
+                  <picture class="picture">
+                    <source srcset="img/live_preview_22x22_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="17" height="17">
+                    <img src="img/live_preview_22x22_white.svg" alt="Open new tab icon." width="17" height="17">
+                  </picture>  
+                  &nbsp;&nbsp;Live Preview</a>
               </div>
               <div class="link-button-background source-link-background">
-                <a href="" class="source-link"><img src="img/code_28x25_blue.svg" alt="Blue colored HTML tag icon." width="20">&nbsp;&nbsp;Source Code</a>
+                <a href="" class="source-link">
+                  <picture class="picture">
+                    <source srcset="img/code_24x22_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="18.5" height="16.94">
+                    <img src="img/code_24x22_blue.svg" alt="HTML tag icon." width="18.5" height="16.94">
+                  </picture>
+                  &nbsp;&nbsp;Source Code
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="projects-extras-container">
-          <img src="img/code_50x45_blue.svg" alt="Blue HTML Tag Icon." width="50" height="auto" class="project-html-tag-icon">
-          <h3 class="heading3 projects-extras-heading">More Projects Coming Soon!</h3>
-          <p class="paragraph projects-extras-paragraph">I'm constantly working on new projects and learning new technologies. Check back soon for more updates, or follow my journey on GitHub.</p>
-          <div class="link-buttons projects-link-buttons">
-            <div class="link-button-background github-projects-link-background">
-            <a href="" class="github-projects-link"><img src="img/github_30x30_white.svg" alt="White colored GitHub icon" width="20">&nbsp;&nbsp;View All On GitHub</a>
+        <picture class="picture">
+          <source srcset="img/code_50x45_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="50" height="45.14" class="project-html-tag-icon">
+          <img src="img/code_50x45_blue.svg" alt="HTML tag icon." width="50" height="45.14" class="project-html-tag-icon">
+        </picture>
+        <h3 class="heading3 projects-extras-heading">More Projects Coming Soon!</h3>
+        <p class="paragraph projects-extras-paragraph">I'm constantly working on new projects and learning new technologies. Check back soon for more updates, or follow my journey on GitHub.</p>
+        <div class="link-buttons projects-link-buttons">
+          <div class="link-button-background github-projects-link-background">
+            <a href="https://github.com/joelmathews5775/myprojects" class="github-projects-link">
+              <picture class="picture">
+                <source srcset="img/github_30x30_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="18" height="18">
+                <img src="img/github_30x30_white.svg" alt="GitHub website icon." width="18" height="18">
+              </picture>
+              &nbsp;&nbsp;View All On GitHub
+            </a>
           </div>
         </div>
       </div>
@@ -282,7 +351,10 @@
             <h3 class="heading3 contact-info-section-heading">Contact Information</h3>
             <div class="contact-email-container">
               <div class="email-icon-background">
-                <img src="img/email_30x24_blue.svg" alt="Blue Message Icon." width="24" height="auto">
+                <picture class="picture">
+                  <source srcset="img/email_30x24_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="24" height="19.26">
+                  <img src="img/email_30x24_blue.svg" alt="Email envelope icon." width="24" height="19.26">
+                </picture>
               </div>
               <div class="email-details">
                 <p class="contact-label">Email</p>
@@ -292,7 +364,10 @@
             </div>
             <div class="contact-phone-container">
               <div class="phone-icon-background">
-                <img src="img/phone_25x25_blue.svg" alt="Blue Phone Icon." width="21" height="auto">
+                <picture class="picture">
+                  <source srcset="img/phone_25x25_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="21" height="20.99">
+                  <img src="img/phone_25x25_blue.svg" alt="Phone communication icon." width="21" height="20.99">
+                </picture>
               </div>
               <div class="phone-details">
                 <p class="contact-label">Phone</p>
@@ -302,7 +377,10 @@
             </div>
             <div class="contact-location-container">
               <div class="location-icon-background">
-                <img src="img/location_25x32_blue.svg" alt="Blue Location Icon." width="20" height="auto">
+                <picture class="picture">
+                  <source srcset="img/location_25x32_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="20" height="25.11">
+                  <img src="img/location_25x32_blue.svg" alt="Location pointer icon." width="20" height="25.11">
+                </picture>
               </div>
               <div class="location-details">
                 <p class="contact-label">Location</p>
@@ -314,10 +392,22 @@
               <h3 class="heading3 contact-social-heading">Follow Me</h3>
               <div class="link-buttons contact-link-buttons">
                 <div class="link-button-background github-link-background">
-                  <a href="" class="github-link"><img src="img/github_30x30_white.svg" alt="White colored GitHub icon." width="20">&nbsp;&nbsp;GitHub</a>
+                  <a href="https://github.com/joelmathews5775" class="github-link">
+                    <picture class="picture">
+                      <source srcset="img/github_30x30_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="18" height="18">
+                      <img src="img/github_30x30_white.svg" alt="GitHub website icon." width="18" height="18">
+                    </picture>
+                    &nbsp;&nbsp;GitHub
+                  </a>
                 </div>
                 <div class="link-button-background likendin-link-background">
-                  <a href="" class="linkedin-link"><img src="img/linkedin_30x30_blue.svg" alt="Blue colored LinkednIn icon." width="20">&nbsp;&nbsp;LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/jmathews5775/" class="linkedin-link">
+                    <picture class="picture">
+                      <source srcset="img/linkedin_30x30_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="18.5" height="18.5">
+                      <img src="img/linkedin_30x30_blue.svg" alt="LinkednIn website icon." width="18.5" height="18.5">
+                    </picture>
+                    &nbsp;&nbsp;LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
@@ -335,7 +425,13 @@
           </form>
           <div class="link-buttons contact-message-link-buttons">
             <div class="link-button-background send-message-button-background">
-              <button class="send-message"><img src="img/send_23x22_white.svg" alt="White colored send icon." width="20">&nbsp;&nbsp;Send Message</button>
+              <button class="send-message">
+                <picture class="picture">
+                  <source srcset="img/send_23x22_black.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" width="16.5" height="16.49">
+                  <img src="img/send_23x22_white.svg" alt="Send message icon." width="16.5" height="16.49">
+                </picture>
+                &nbsp;&nbsp;Send Message
+              </button>
             </div>
           </div>
         </div>
@@ -348,10 +444,11 @@
     <p class="paragraph footer-paragraph quoted-text"><q>The only way to do great work is to love what you do.</q> - Steve Jobs</p>
     <hr class="white-line">
     <div class="footer-extras-container">
-      <p class="paragraph footer-paragraph">Made with lots of love and coffee by Joel Mathews</p>
+      <p class="paragraph footer-paragraph">Made with <img src="img/love_25x23_red.svg" alt="Love heart icon." width="20" height="18.4" class="footer-icon"> and <img src="img/code_28x25_green.svg" alt="HTML tag icon." width="21" height="18.7" class="footer-icon"> by Joel Mathews</p>
       <p class="paragraph footer-paragraph">&copy; 2025, Joel Mathews. All rights reserved.</p>
     </div>
+    <p class="paragraph footer-paragraph">Always learning, Always building, Always growing.</p>
   </footer>
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>

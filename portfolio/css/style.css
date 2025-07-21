@@ -11,11 +11,14 @@
   --dark-hover2-color:  #505050;
   --light-background-color: #FFFFFF;
   --dark-background-color: #202020;
+  --light-text-color: #dadada;
   --dark-text-color: #000000;
   --light-primary-color: #0559A7;
   --light-primary-active-color: #0b356e;  
   --dark-primary-color: #01EC70;
+  --dark-primary-active-color: #12bb61;
   --light-border-color: #a0a0a0;
+  --dark-border-color: #222222;
   --light-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   --dark-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
   --website-font: Montserrat, Arial, sans-serif;
@@ -90,10 +93,8 @@ body {
 .skills-extras-container {
   width: 100%;
   height: auto;
+  background-color: var(--light-hover-color);
   padding: 0.625rem 0;
-  border-radius: 7.5px;
-  border: 1px solid var(--light-border-color);
-  box-shadow: var(--light-box-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,9 +179,9 @@ body {
 }
 .footer-extras-container {
   width: 100%;
-  /* display: flex; 
+  display: flex; 
   flex-direction: column;
-  align-items: center; */
+  align-items: center;
 }
 .header-icon-background {
   width: 3.25rem;
@@ -202,6 +203,11 @@ body {
   -webkit-tap-highlight-color: transparent;
   display: flex;
   justify-content: center;
+}
+picture {
+  width: auto;
+  height: auto;
+  display: flex;
 }
 .desktop-nav {
   display: none;
@@ -322,27 +328,19 @@ body {
   font-size: 1rem;
   font-weight: 400;
 }
-.hero-paragraph, .about-main-paragraph, .skills-main-paragraph, .skills-extras-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .projects-extras-paragraph, .contact-paragraph, .footer-paragraph {
+.hero-paragraph, .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .skills-extras-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .projects-extras-paragraph, .contact-paragraph, .footer-paragraph {
   text-align: center;
   margin-bottom: 1.563rem;
 }
 .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph {
   color: var(--dark-background-color);
-}
-.justified-paragraph {
-  text-align: justify;
-  hyphens: auto;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  text-justify: inter-word;
-  margin-bottom: 1.563rem;
-}
+} 
 .about-extras-paragraph {
   text-align: center;
   margin-bottom: 0;
 }
 .skills-extras-paragraph {
-  color: var(--dark-background-color);
+  color: var(--dark-text-color);
   margin-top: 1.063rem;
 }
 .link-buttons {
@@ -362,6 +360,7 @@ body {
 .link-button-background {
   width: 90%;
   height: 3.25rem;
+  transition: all 0.3s ease;
   display: flex; 
   justify-content: center;
   align-items: center; 
@@ -373,13 +372,6 @@ body {
   background-color: var(--light-background-color);
   border: 3px solid var(--light-primary-color);
 }
-/* .about-active-link-background, .resume-active-link-background, .preview-active-link-background, .github-projects-active-link-background {
-  background-color: var(--light-primary-active-color);
-}
-.contact-active-link-background, .source-active-link-background {
-  background-color: var(--light-primary-active-color);
-  border: none;
-} */
 .about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
   width: 100%;
   height: 3.25rem;
@@ -389,6 +381,8 @@ body {
   font-family: Montserrat;
   font-size: 1rem;
   font-weight: 700;
+  /* -webkit-tap-highlight-color: transparent; */
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -399,9 +393,21 @@ body {
 .contact-link, .source-link, .linkedin-link {
   color: var(--light-primary-color)
 }
-/* .contact-active-link {
+.about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered {
+  border: 3px solid var(--light-primary-active-color);
+}
+.contact-link-background-hovered, .source-link-background-hovered, .likendin-link-background-hovered {
+  border-color: var(--light-primary-active-color);
+}
+.about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active {
+  background-color: var(--light-primary-active-color);
+}
+.contact-link-background-active, .source-link-background-active, .likendin-link-background-active {
+  background-color: var(--light-primary-active-color);
+}
+.contact-link-active, .source-link-active, .linkedin-link-active {
   color: var(--light-background-color);
-} */
+}
 .about-extras-info {
   width: 100%;
   height: auto;
@@ -453,7 +459,7 @@ body {
   font-weight: 800;
 }
 .skill-percent {
-  color: var(--dark-background-color)
+  color: var(--dark-background-color);
 }
 .skill-progress-bar {
   width: 100%;
@@ -502,7 +508,7 @@ body {
 .learnings {
   width: 9.375rem;
   height: 3.25rem;
-  background-color: var(--light-hover-color);
+  background-color: var(--light-background-color);
   border-radius: 40px;
   border: 1px solid var(--light-primary-color);
   display: flex;
@@ -553,7 +559,7 @@ body {
   font-weight: 500;
 }
 .email-id, .phone-no, .location  {
-  color: var(--light-primary-color)
+  color: var(--light-primary-color);
 }
 .contact-text {
   color: var(--dark-hover2-color);
@@ -572,9 +578,11 @@ body {
 .form-fields {
   width: 100%;
   height: 3.25rem;
+  background-color: var(--light-background-color);
+  color: var(--dark-text-color);
   resize: none;
   border-radius: 5px;
-  border: 1px solid var(--dark-hover2-color);
+  border: 1px solid var(--dark-text-color);
   font-family: Montserrat;
   font-size: 1rem;
   margin-bottom: 1.563rem;
@@ -596,6 +604,9 @@ body {
   align-items: center;
   margin-top: 3.5rem;
 } 
+.footer-icon {
+  vertical-align: sub;
+}
 .white-line {
   width: 90%;
   border-top: 0px solid var(--dark-hover2-color);
@@ -647,5 +658,180 @@ body {
   }
   .desktop-nav-active-link {
     color: var(--light-primary-color);
+  }
+  .about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background-color);
+    color: var(--light-background-color);
+  }
+  .header {
+    background-color: var(--dark-background-color);
+  }
+  .header-bottom-shadow {
+    box-shadow: var(--dark-box-shadow);
+  }
+  .about-extras-container {
+    background-color: var(--dark-hover-color);
+  }
+  .skills-extras-container {
+    background-color: var(--dark-hover-color);
+  }
+  .project-container {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .projects-extras-container {
+    background-color: var(--dark-hover-color);
+  }
+  .contact-details-container, .contact-message-container {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .header-icon-background {
+    background-color: var(--dark-hover-color);
+  }
+  .active-icon {
+    background-color: var(--dark-hover2-color);
+  }
+  .desktop-nav-active-item {
+    background-color: var(--dark-hover-color);
+  }
+  .desktop-nav-focused-item {
+    background-color: var(--dark-hover2-color);
+  }
+  .desktop-nav-link {
+    color: var(--light-background-color);
+  }
+  .desktop-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .mobile-nav {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .mobile-nav-active-item {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .mobile-nav-link {
+    color: var(--light-background-color);
+  }
+  .mobile-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .page-section {
+    background-color: var(--dark-background-color);
+  }
+  .hero-section, .about-section, .skills-section, .projects-section, .contact-section {
+    background-color: var(--dark-background-color);
+  }
+  .hero-section {
+    background-color: var(--dark-hover-color);
+    color: var(--light-background-color);
+  }
+  .colored-text {
+    color: var(--dark-primary-color);
+  }
+  .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph {
+    color: var(--light-text-color);
+  } 
+  .skills-extras-paragraph {
+    color: var(--light-background-color);
+  }
+  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background {
+    background-color: var(--dark-primary-color);
+  }
+  .contact-link-background, .source-link-background, .likendin-link-background {
+    background-color: var(--dark-background-color);
+    border: 3px solid var(--dark-primary-color);
+  }
+  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message {
+    color: var(--dark-background-color);
+  }
+  .contact-link, .source-link, .linkedin-link {
+    color: var(--dark-primary-color)
+  }
+  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered {
+    border: 3px solid var(--dark-primary-active-color); /* Change needed */
+  }
+  .contact-link-background-hovered, .source-link-background-hovered, .likendin-link-background-hovered {
+    border-color: var(--dark-primary-active-color); /* Change needed */
+  }
+  .about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active {
+    background-color: var(--dark-primary-active-color); /* Change needed */
+  }
+  .contact-link-background-active, .source-link-background-active, .likendin-link-background-active {
+    background-color: var(--dark-primary-active-color); /* Change needed */
+  }
+  .contact-link-active, .source-link-active, .linkedin-link-active {
+    color: var(--light-background-color); /* Change needed */
+  }
+  .about-extras-info-icon-background {
+    background-color: var(--dark-primary-color);
+  }
+  .skillset-box {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  } 
+  .skill-percent {
+    color: var(--light-background-color);
+  }
+  .skill-progress-bar {
+    /* background-color: var(--light-hover2-color); */
+    background-color: var(--light-hover-color);
+  }
+  .html-progress {
+    background-color: #FF6A00; /* Change maybe needed */
+  }
+  .css-progress {
+    background-color: #4A5FFF; /* Change maybe needed */
+  }
+  .js-progress {
+    background-color: #FFBF1C; /* Change maybe needed */
+  }
+  .react-progress {
+    background-color: #1ebde9; /* Change maybe needed */
+  }
+  .vscode-progress {
+    background-color: #1C36FF; /* Change maybe needed */
+  }
+  .rwd-progress {
+    background-color: #00D965; /* Change maybe needed */
+  }
+  .git-progress {
+    background-color: #FF1500; /* Change maybe needed */
+  }
+  .figma-progress {
+    background-color: #FF1CA0; /* Change maybe needed */
+  }
+  .learnings {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .concept {
+    color: var(--dark-primary-color);
+  }
+  .project-preview-image-background {
+    background-color: var(--dark-hover2-color);
+  }
+  .email-icon-background, .phone-icon-background, .location-icon-background {
+    background-color: var(--dark-hover-color);
+  }
+  .email-id, .phone-no, .location  {
+    color: var(--dark-primary-color);
+  }
+  .contact-text {
+    color: var(--light-hover2-color);
+  }
+  .form-fields {
+    background-color: var(--dark-background-color);
+    color: var(--light-text-color);
+    border: 1px solid var(--light-text-color);
   }
 }

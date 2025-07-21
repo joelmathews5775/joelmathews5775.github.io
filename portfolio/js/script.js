@@ -1,165 +1,61 @@
+import {addheaderShadowOnScroll, eventAnimations, setupNavigation} from '../js/functions.js';
+
 const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 0) {
-    header.classList.add('header-bottom-shadow');
-  } else {
-    header.classList.remove('header-bottom-shadow');
-  }
-});
+addheaderShadowOnScroll(header, 'header-bottom-shadow');
 
 const homeLink = document.querySelector('.home-link');
-homeLink.addEventListener('focus', () => {
-  homeLink.parentNode.classList.add('active-icon');
-});
-homeLink.addEventListener('blur', () => {
-  homeLink.parentNode.classList.remove('active-icon');
-});
-homeLink.addEventListener('mouseover', () => {
-  homeLink.parentNode.classList.add('active-icon');
-});
-homeLink.addEventListener('mouseout', () => {
-  homeLink.parentNode.classList.remove('active-icon');
-});
+eventAnimations('headerIconLink', homeLink, 'active-icon');
 
 const openMenuButton = document.querySelector('.open-menu-button');
-const mobileNavMenu = document.querySelector('.mobile-nav');
-openMenuButton.addEventListener('focus', () => {
-  openMenuButton.parentNode.classList.add('active-icon');
-});
-openMenuButton.addEventListener('blur', () => {
-  openMenuButton.parentNode.classList.remove('active-icon');
-});
-openMenuButton.addEventListener('mouseover', () => {
-  openMenuButton.parentNode.classList.add('active-icon');
-});
-openMenuButton.addEventListener('mouseout', () => {
-  openMenuButton.parentNode.classList.remove('active-icon');
-});
-openMenuButton.addEventListener('click', () => {
-  setTimeout(() => {
-    mobileNavMenu.classList.remove('hide');
-    openMenuButton.parentNode.classList.remove('active-icon');
-    openMenuButton.parentNode.classList.add('hide');
-    closeMenuButton.parentNode.classList.remove('hide');
-  }, 100)
-});
-
 const closeMenuButton = document.querySelector('.close-menu-button');
-closeMenuButton.addEventListener('focus', () => {
-  closeMenuButton.parentNode.classList.add('active-icon');
-});
-closeMenuButton.addEventListener('blur', () => {
-  closeMenuButton.parentNode.classList.remove('active-icon');
-});
-closeMenuButton.addEventListener('mouseover', () => {
-  closeMenuButton.parentNode.classList.add('active-icon');
-});
-closeMenuButton.addEventListener('mouseout', () => {
-  closeMenuButton.parentNode.classList.remove('active-icon');
-});
-closeMenuButton.addEventListener('click', () => {
-  setTimeout(() => {
-    mobileNavMenu.classList.add('hide');
-    closeMenuButton.parentNode.classList.remove('active-icon');
-    closeMenuButton.parentNode.classList.add('hide');
-    openMenuButton.parentNode.classList.remove('hide');
-  }, 100)
-});
+const mobileNavMenu = document.querySelector('.mobile-nav');
+eventAnimations('headerIconButton', openMenuButton, 'active-icon', mobileNavMenu, 'hide', closeMenuButton, undefined, 100);
+eventAnimations('headerIconButton', closeMenuButton, 'active-icon', mobileNavMenu, 'hide', undefined, openMenuButton, 100);
 
 const sections = document.querySelectorAll('section');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-function mobileNav() {
-  let currentSectionId = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80; // adjust for nav height
-    const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      currentSectionId = section.id;
-    }
-  });
-  mobileNavLinks.forEach(link => {
-    link.parentNode.classList.remove('mobile-nav-active-item');
-    link.classList.remove('mobile-nav-active-link');
-    if (link.getAttribute('href') === '#' + currentSectionId) {
-      link.parentNode.classList.add('mobile-nav-active-item');
-      link.classList.add('mobile-nav-active-link');  
-    }
-  });
-  setTimeout(() => {
-    closeMenuButton.parentNode.classList.add('hide');
-    openMenuButton.parentNode.classList.remove('hide');
-    mobileNavMenu.classList.add('hide');
-    
-  }, 800);
-}
-window.addEventListener('scroll', mobileNav);
-
 const desktopNavLinks = document.querySelectorAll('.desktop-nav-link');
-function desktopNav() {
-  let currentSectionId = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 80; // adjust for nav height
-    const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      currentSectionId = section.id;
-    }
-  });
-  desktopNavLinks.forEach(link => {
-    link.parentNode.classList.remove('desktop-nav-active-item');
-    link.classList.remove('desktop-nav-active-link');
-    if (link.getAttribute('href') === '#' + currentSectionId) {
-      link.parentNode.classList.add('desktop-nav-active-item');
-      link.classList.add('desktop-nav-active-link');
-    }
-  });
-}
-window.addEventListener('scroll', desktopNav);
-
+setupNavigation('mobile', sections, 80, mobileNavLinks, 'mobile-nav-active-item', 'mobile-nav-active-link', closeMenuButton, openMenuButton, 'hide', mobileNavMenu, 800);
+setupNavigation('desktop',sections, 80, desktopNavLinks, 'desktop-nav-active-item', 'desktop-nav-active-link');
 desktopNavLinks.forEach(link => {
-  link.addEventListener('focus', () => {
-    link.parentNode.classList.add('desktop-nav-focused-item');
-  });
-  link.addEventListener('blur', () => {
-    link.parentNode.classList.remove('desktop-nav-focused-item');
-  });
-  link.addEventListener('mouseover', () => {
-    link.parentNode.classList.add('desktop-nav-focused-item');
-  });
-  link.addEventListener('mouseout', () => {
-    link.parentNode.classList.remove('desktop-nav-focused-item');
-  });
+  eventAnimations('desktopNavLink', link, 'desktop-nav-focused-item');
 });
 
 const aboutLinkButton = document.querySelector('.about-link');
-aboutLinkButton.addEventListener('focus', () => {
-  aboutLinkButton.parentNode.classList.add('about-active-link-background');
-});
-aboutLinkButton.addEventListener('blur', () => {
-  aboutLinkButton.parentNode.classList.remove('about-active-link-background');
-});
 aboutLinkButton.addEventListener('mouseover', () => {
-  aboutLinkButton.parentNode.classList.add('about-active-link-background');
+  aboutLinkButton.parentNode.classList.add('about-link-background-hovered');
 });
 aboutLinkButton.addEventListener('mouseout', () => {
-  aboutLinkButton.parentNode.classList.remove('about-active-link-background');
+  aboutLinkButton.parentNode.classList.remove('about-link-background-hovered');
+});
+aboutLinkButton.addEventListener('focus', () => {
+  aboutLinkButton.parentNode.classList.add('about-link-background-active');
+});
+aboutLinkButton.addEventListener('blur', () => {
+  setTimeout(() => {
+    aboutLinkButton.parentNode.classList.remove('about-link-background-active');
+  }, 250);
 });
 
 const contactLinkButton = document.querySelector('.contact-link');
-contactLinkButton.addEventListener('focus', () => {
-  contactLinkButton.parentNode.classList.add('contact-active-link-background');
-  contactLinkButton.classList.add('contact-active-link');
-});
-contactLinkButton.addEventListener('blur', () => {
-  contactLinkButton.parentNode.classList.remove('contact-active-link-background');
-  contactLinkButton.classList.remove('contact-active-link');
-});
+const imageIcon = document.querySelector('.message-icon');
 contactLinkButton.addEventListener('mouseover', () => {
-  contactLinkButton.parentNode.classList.add('contact-active-link-background');
-  contactLinkButton.classList.add('contact-active-link');
+  contactLinkButton.parentNode.classList.add('contact-link-background-hovered');
 });
 contactLinkButton.addEventListener('mouseout', () => {
-  contactLinkButton.parentNode.classList.remove('contact-active-link-background');
-  contactLinkButton.classList.remove('contact-active-link');
+  contactLinkButton.parentNode.classList.remove('contact-link-background-hovered');
+});
+contactLinkButton.addEventListener('focus', () => {
+  imageIcon.setAttribute('src','img/message_22x22_white.svg');
+  contactLinkButton.parentNode.classList.add('contact-link-background-active');
+  contactLinkButton.classList.add('contact-link-active');
+});
+contactLinkButton.addEventListener('blur', () => {
+  setTimeout(() => {
+    imageIcon.setAttribute('src','img/message_22x22_blue.svg');
+    contactLinkButton.parentNode.classList.remove('contact-link-background-active');
+    contactLinkButton.classList.remove('contact-link-active');
+  }, 250);
 });
 
 const resumeLinkButton = document.querySelector('.resume-link');
