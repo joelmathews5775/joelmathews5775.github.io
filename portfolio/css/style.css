@@ -1,0 +1,837 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --light-hover-color: #EFF6FF;
+  --dark-hover-color: #363636;
+  --light-hover2-color: #e1e1e1;
+  --dark-hover2-color:  #505050;
+  --light-background-color: #FFFFFF;
+  --dark-background-color: #202020;
+  --light-text-color: #dadada;
+  --dark-text-color: #000000;
+  --light-primary-color: #0559A7;
+  --light-primary-active-color: #0b356e;  
+  --dark-primary-color: #01EC70;
+  --dark-primary-active-color: #12bb61;
+  --light-border-color: #a0a0a0;
+  --dark-border-color: #222222;
+  --light-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  --dark-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
+  --website-font: Montserrat, Arial, sans-serif;
+  --progress-bar-color: #D9D9D9;
+  
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--light-background-color);
+  color: var(--dark-text-color);
+  font-family: var(--website-font);
+  font-size: 1rem;
+}
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--light-background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-bottom-shadow {
+  box-shadow: var(--light-box-shadow);
+}
+.header-contents-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-contents-container, .about-main-contents-container, .skills-main-contents-container, .projects-contents-container, .contact-contents-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+}
+.hero-contents-container, .about-main-contents-container, .skills-main-contents-container, .projects-contents-container, .contact-contents-container {
+  align-items: center;
+}
+.about-extras-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--light-hover-color);
+  padding: 0.625rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.625rem;
+}
+.skillsets-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-labels-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.skills-extras-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--light-hover-color);
+  padding: 0.625rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+.learning-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-container {
+  width: 100%;
+  height: auto;
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  box-shadow: var(--light-box-shadow);
+  overflow: hidden;
+  /* display: flex; 
+  flex-direction: column;
+  align-items: center;*/
+  /* justify-content: space-between; */
+  margin: 1.25rem 0 2.25rem 0;
+}
+.project-details-container {
+  width: 100%;
+  height: auto;
+  padding: 0.625rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-extras-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--light-hover-color);
+  padding: 0.625rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+.contact-container {
+  width: 100%;
+  height: auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin-top: 0.469rem;
+}
+.contact-details-container, .contact-message-container {
+  width: 100%;
+  height: auto;
+  padding: 0.625rem 0;
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  box-shadow: var(--light-box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-details-container {
+  margin: 1.25rem 0 2.031rem 0;
+}
+.contact-message-container {
+  margin-top: 1.5rem;
+}
+.contact-email-container, .contact-phone-container, .contact-location-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.563rem;
+}
+.contact-phone-container, .contact-location-container {
+  margin-top: 1.563rem;
+}
+.social-container {
+  width: 100%;
+}
+.footer-extras-container {
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.header-icon-background {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--light-hover-color);
+  border-radius: 5px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-icon {
+  background-color: var(--light-hover2-color);
+}
+.home-link, .open-menu-button, .close-menu-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+picture {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+.desktop-nav {
+  display: none;
+}
+.mobile-nav {
+  width: 90%;
+  height: auto;
+  background-color: var(--light-hover-color);
+  border: 1px solid var(--light-primary-color);
+  border-radius: 7.5px;
+  box-shadow: var(--light-box-shadow);
+  position: fixed;
+  top: 5rem;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+}
+.mobile-nav-list {
+  width: 93%;
+  height: 20rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0.625rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobile-nav-item {
+  width: 100%;
+  height: 3.25rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-nav-active-item {
+  background-color: var(--light-background-color);
+  border: 1px solid var(--light-primary-color);
+}
+.mobile-nav-link {
+  width: 100%;
+  height: 3.25rem;
+  color: var(--dark-text-color);
+  text-decoration: none;
+  text-align: center;
+  padding: 1.025rem 0;
+  font-weight: 700;
+}
+.mobile-nav-active-link {
+  color: var(--light-primary-color);
+}
+.page-section {
+  width: 90%;
+  min-height: 100vh;
+  background-color: var(--light-background-color);
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+.hero-section, .about-section, .skills-section, .projects-section, .contact-section {
+  width: 90%;
+  height: auto;
+  background-color: var(--light-background-color);
+  display: flex;
+  flex-direction: column;
+}
+.hero-section {
+  height: 100vh;
+  background-color: var(--light-hover-color);
+  color: var(--dark-text-color);
+  justify-content: center;
+}
+.skills-section {
+  align-items: center;
+}
+.heading1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+.heading2 {
+  font-size: 1.95rem;
+  font-weight: 800;
+}
+.heading3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+.heading4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.hero-heading, .about-main-sub-heading, .about-extras-heading {
+  text-align: center;
+  margin-bottom: 1.563rem;
+}
+.about-main-heading, .skills-main-heading, .skills-section-heading, .projects-main-heading, .project-main-sub-heading, .projects-extras-heading, .contact-heading, .contact-info-section-heading, .contact-social-heading, .contact-message-heading, .footer-heading {
+  text-align: center;
+  margin: 1.563rem 0;
+}
+.skills-section-heading {
+  width: 90%;
+}
+.skills-extras-heading {
+  margin: 1.563rem 0 2rem 0;
+}
+.colored-text {
+  color: var(--light-primary-color);
+}
+.strong-text {
+  text-align: center;
+  font-size: 1.185rem;
+  font-weight: 500;
+  margin-bottom: 1.563rem;
+}
+.paragraph {
+  width: 90%;
+  height: auto;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.hero-paragraph, .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .skills-extras-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .projects-extras-paragraph, .contact-paragraph, .footer-paragraph {
+  text-align: center;
+  margin-bottom: 1.563rem;
+}
+.about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph {
+  color: var(--dark-background-color);
+} 
+.about-extras-paragraph {
+  text-align: center;
+  margin-bottom: 0;
+}
+.skills-extras-paragraph {
+  color: var(--dark-text-color);
+  margin-top: 1.063rem;
+}
+.link-buttons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.094rem;
+}
+.hero-link-buttons, .about-link-buttons, .projects-link-buttons {
+  margin-top: 0.625rem;
+}
+.about-link-buttons, .projects-link-buttons, .contact-link-buttons, .contact-message-link-buttons {
+  margin-bottom: 2.031rem;
+}
+.link-button-background {
+  width: 90%;
+  height: 3.25rem;
+  transition: all 0.3s ease;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background {
+  background-color: var(--light-primary-color);
+}
+.contact-link-background, .source-link-background, .likendin-link-background {
+  background-color: var(--light-background-color);
+  border: 3px solid var(--light-primary-color);
+}
+.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+  width: 100%;
+  height: 3.25rem;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  /* -webkit-tap-highlight-color: transparent; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message {
+  color: var(--light-background-color);
+}
+.contact-link, .source-link, .linkedin-link {
+  color: var(--light-primary-color)
+}
+.about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered {
+  border: 3px solid var(--light-primary-active-color);
+}
+.contact-link-background-hovered, .source-link-background-hovered, .likendin-link-background-hovered {
+  border-color: var(--light-primary-active-color);
+}
+.about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active {
+  background-color: var(--light-primary-active-color);
+}
+.contact-link-background-active, .source-link-background-active, .likendin-link-background-active {
+  background-color: var(--light-primary-active-color);
+}
+.contact-link-active, .source-link-active, .linkedin-link-active {
+  color: var(--light-background-color);
+}
+.about-extras-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.563rem 0;
+}
+.about-extras-info-icon-background {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--light-primary-color);
+  border-radius: 5px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.469rem 0 2rem 0;
+}
+.skillset-box {
+  width: 100%;
+  height: auto;
+  padding: 0.625rem 0;
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  box-shadow: var(--light-box-shadow);
+} 
+.frontend-skillset, .tools-workflows-skillset {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  margin: 1.25rem 0 2.25rem 0;
+}
+.html-skill, .css-skill, .js-skill, .react-skill, .vscode-skill, .rwd-skill, .git-skill, .figma-skill {
+  width: 85%;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-bottom: 1.563rem;
+}
+.react-skill, .figma-skill {
+  margin-bottom: 2.031rem;
+}
+.skill-label {
+  font-weight: 800;
+}
+.skill-percent {
+  color: var(--dark-background-color);
+}
+.skill-progress-bar {
+  width: 100%;
+  height: 0.781rem;
+  background-color: var(--light-hover2-color);
+  border-radius: 25px;
+  position: relative;
+}
+.html-progress, .css-progress, .js-progress, .react-progress, .vscode-progress, .rwd-progress ,.git-progress, .figma-progress {
+  height: 0.781rem;
+  border-radius: 25px;
+  position: absolute;
+}
+.html-progress {
+  width: 85%;
+  background-color: #FF6A00;
+}
+.css-progress {
+  width: 80%;
+  background-color: #4A5FFF;
+}
+.js-progress {
+  width: 70%;
+  background-color: #FFBF1C;
+}
+.react-progress {
+  width: 10%;
+  background-color: #1ebde9;
+}
+.vscode-progress {
+  width: 85%;
+  background-color: #1C36FF;
+}
+.rwd-progress {
+  width: 80%;
+  background-color: #00D965;
+}
+.git-progress {
+  width: 60%;
+  background-color: #FF1500;
+}
+.figma-progress {
+  width: 50%;
+  background-color: #FF1CA0;
+}
+.learnings {
+  width: 9.375rem;
+  height: 3.25rem;
+  background-color: var(--light-background-color);
+  border-radius: 40px;
+  border: 1px solid var(--light-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.938rem;
+}
+.concept {
+  color: var(--light-primary-color);
+  font-weight: 700;
+}
+.quoted-text {
+  font-style: italic;
+}
+.project-preview-image-background {
+  width: 100%;
+  height: 15.625rem;
+  background-color: var(--light-hover2-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-html-tag-icon {
+  margin-top: 2.031rem;
+}
+.email-icon-background, .phone-icon-background, .location-icon-background {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--light-hover-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.563rem;
+}
+.email-details, .phone-details, .location-details {
+  width: 100%;
+}
+.contact-label, .contact-detail {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1.094rem;
+}
+.contact-label {
+  font-weight: 800;
+}
+.contact-detail {
+  font-weight: 500;
+}
+.email-id, .phone-no, .location  {
+  color: var(--light-primary-color);
+}
+.contact-text {
+  color: var(--dark-hover2-color);
+  text-align: center;
+  font-size: 1rem;
+}
+.message-form {
+  width: 90%;
+  height: auto;
+}
+.form-labels {
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.469rem;
+}
+.form-fields {
+  width: 100%;
+  height: 3.25rem;
+  background-color: var(--light-background-color);
+  color: var(--dark-text-color);
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid var(--dark-text-color);
+  font-family: Montserrat;
+  font-size: 1rem;
+  margin-bottom: 1.563rem;
+}
+.name-field, .email-field {
+  padding-left: 0.625rem;
+}
+.message-field {
+  height: 12.5rem;
+  padding: 0.625rem;
+}
+.footer{
+  width: 100%;
+  height: auto;
+  background-color: #090912;
+  color: var(--light-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5rem;
+} 
+.footer-icon {
+  vertical-align: sub;
+}
+.white-line {
+  width: 90%;
+  border-top: 0px solid var(--dark-hover2-color);
+  margin-bottom: 1.563rem;
+}
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .menu-background, .close-background {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    width: 80%;
+    height: 3.25rem;
+    display: block;
+  }
+  .desktop-nav-list {
+    width: 100%;
+    height: 3.25rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .desktop-nav-item {
+    width: 9.375rem;
+    height: 3.25rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop-nav-active-item {
+    background-color: var(--light-hover-color);
+  }
+  .desktop-nav-focused-item {
+    background-color: var(--light-hover2-color);
+  }
+  .desktop-nav-link {
+    background-color: transparent;
+    color: var(--dark-hover-color);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .desktop-nav-active-link {
+    color: var(--light-primary-color);
+  }
+  .about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background-color);
+    color: var(--light-background-color);
+  }
+  .header {
+    background-color: var(--dark-background-color);
+  }
+  .header-bottom-shadow {
+    box-shadow: var(--dark-box-shadow);
+  }
+  .about-extras-container {
+    background-color: var(--dark-hover-color);
+  }
+  .skills-extras-container {
+    background-color: var(--dark-hover-color);
+  }
+  .project-container {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .projects-extras-container {
+    background-color: var(--dark-hover-color);
+  }
+  .contact-details-container, .contact-message-container {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .header-icon-background {
+    background-color: var(--dark-hover-color);
+  }
+  .active-icon {
+    background-color: var(--dark-hover2-color);
+  }
+  .desktop-nav-active-item {
+    background-color: var(--dark-hover-color);
+  }
+  .desktop-nav-focused-item {
+    background-color: var(--dark-hover2-color);
+  }
+  .desktop-nav-link {
+    color: var(--light-background-color);
+  }
+  .desktop-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .mobile-nav {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .mobile-nav-active-item {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .mobile-nav-link {
+    color: var(--light-background-color);
+  }
+  .mobile-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .page-section {
+    background-color: var(--dark-background-color);
+  }
+  .hero-section, .about-section, .skills-section, .projects-section, .contact-section {
+    background-color: var(--dark-background-color);
+  }
+  .hero-section {
+    background-color: var(--dark-hover-color);
+    color: var(--light-background-color);
+  }
+  .colored-text {
+    color: var(--dark-primary-color);
+  }
+  .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph {
+    color: var(--light-text-color);
+  } 
+  .skills-extras-paragraph {
+    color: var(--light-background-color);
+  }
+  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background {
+    background-color: var(--dark-primary-color);
+  }
+  .contact-link-background, .source-link-background, .likendin-link-background {
+    background-color: var(--dark-background-color);
+    border: 3px solid var(--dark-primary-color);
+  }
+  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message {
+    color: var(--dark-background-color);
+  }
+  .contact-link, .source-link, .linkedin-link {
+    color: var(--dark-primary-color)
+  }
+  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered {
+    border: 3px solid var(--dark-primary-active-color); /* Change needed */
+  }
+  .contact-link-background-hovered, .source-link-background-hovered, .likendin-link-background-hovered {
+    border-color: var(--dark-primary-active-color); /* Change needed */
+  }
+  .about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active {
+    background-color: var(--dark-primary-active-color); /* Change needed */
+  }
+  .contact-link-background-active, .source-link-background-active, .likendin-link-background-active {
+    background-color: var(--dark-primary-active-color); /* Change needed */
+  }
+  .contact-link-active, .source-link-active, .linkedin-link-active {
+    color: var(--light-background-color); /* Change needed */
+  }
+  .about-extras-info-icon-background {
+    background-color: var(--dark-primary-color);
+  }
+  .skillset-box {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  } 
+  .skill-percent {
+    color: var(--light-background-color);
+  }
+  .skill-progress-bar {
+    /* background-color: var(--light-hover2-color); */
+    background-color: var(--light-hover-color);
+  }
+  .html-progress {
+    background-color: #FF6A00; /* Change maybe needed */
+  }
+  .css-progress {
+    background-color: #4A5FFF; /* Change maybe needed */
+  }
+  .js-progress {
+    background-color: #FFBF1C; /* Change maybe needed */
+  }
+  .react-progress {
+    background-color: #1ebde9; /* Change maybe needed */
+  }
+  .vscode-progress {
+    background-color: #1C36FF; /* Change maybe needed */
+  }
+  .rwd-progress {
+    background-color: #00D965; /* Change maybe needed */
+  }
+  .git-progress {
+    background-color: #FF1500; /* Change maybe needed */
+  }
+  .figma-progress {
+    background-color: #FF1CA0; /* Change maybe needed */
+  }
+  .learnings {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .concept {
+    color: var(--dark-primary-color);
+  }
+  .project-preview-image-background {
+    background-color: var(--dark-hover2-color);
+  }
+  .email-icon-background, .phone-icon-background, .location-icon-background {
+    background-color: var(--dark-hover-color);
+  }
+  .email-id, .phone-no, .location  {
+    color: var(--dark-primary-color);
+  }
+  .contact-text {
+    color: var(--light-hover2-color);
+  }
+  .form-fields {
+    background-color: var(--dark-background-color);
+    color: var(--light-text-color);
+    border: 1px solid var(--light-text-color);
+  }
+}
