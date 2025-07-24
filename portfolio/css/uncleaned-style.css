@@ -1,0 +1,73 @@
+.hero-section, .about-section, .skills-section, .projects-section, .contact-section {
+  width: 90%;
+  height: auto;
+  background-color: var(--light-background-color);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* border: 1px solid black; */
+}
+.hero-content-container, .about-content-container, .skills-content-container, .projects-content-container, .contact-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+}
+.hero-content-container, .about-content-container, .projects-content-container, .contact-content-container {
+  align-items: center;
+}
+.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .likendin-link-background, .send-message-button-background {
+  background-color: var(--light-primary-color);
+}
+.contact-link-background, .source-link-background {
+  background-color: var(--light-background-color);
+  border: 3px solid var(--light-primary-color);
+}
+.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+  width: 100%;
+  height: 3.25rem;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  /* -webkit-tap-highlight-color: transparent; */
+  /* border: 1px solid black; */
+}
+.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+  color: var(--light-background-color);
+}
+.contact-link, .source-link {
+  color: var(--light-primary-color)
+}
+.about-active-link-background, .resume-active-link-background, .preview-active-link-background, .github-projects-active-link-background, .github-active-link-background, .linkedin-active-link-background {
+  background-color: var(--light-primary-active-color);
+}
+.contact-active-link-background, .source-active-link-background {
+  background-color: var(--light-primary-active-color);
+  border: none;
+}
+.contact-active-link, .source-active-link {
+  color: var(--light-background-color);
+}
+
+
+.hide {
+  display: none;
+}
+
+/* @media only screen and (min-width: 375px) {
+}
+
+@media only screen and (min-width: 430px) {
+  
+}
+
+@media only screen and (min-width: 768px) {
+  
+} */
+
