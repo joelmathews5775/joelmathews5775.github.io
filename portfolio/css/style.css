@@ -7,18 +7,18 @@
 :root {
   --light-hover-color: #EFF6FF;
   --dark-hover-color: #363636;
-  --light-hover2-color: #e1e1e1;
+  --light-hover2-color: #E1E1E1;
   --dark-hover2-color:  #505050;
   --light-background-color: #FFFFFF;
   --dark-background-color: #202020;
-  --light-text-color: #dadada;
+  --light-text-color: #DADADA;
   --dark-text-color: #000000;
   --light-primary-color: #0559A7;
-  --light-primary-active-color: #043a6d;  
+  --light-primary-active-color: #043A6D;  
   --dark-primary-color: #01EC70;
-  --dark-primary-active-color: #60ffaa;
-  --light-border-color: #a0a0a0;
-  --dark-border-color: #222222;
+  --dark-primary-active-color: #60FFAA;
+  --light-border-color: #A0A0A0;
+  --dark-border-color: #424242;
   --light-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   --dark-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
   --website-font: Montserrat, Arial, sans-serif;
@@ -33,6 +33,7 @@ body {
   color: var(--dark-text-color);
   font-family: var(--website-font);
   font-size: 1rem;
+  overflow: visible;
 }
 .header {
   width: 100%;
@@ -195,13 +196,19 @@ body {
   background-color: var(--light-hover2-color);
 }
 .home-link, .open-menu-button, .close-menu-button {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
   background-color: transparent;
+  border-radius: inherit;
   border: none;
   -webkit-tap-highlight-color: transparent;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.home-link:focus, .open-menu-button:focus, .close-menu-button:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 0px;
 }
 picture {
   width: auto;
@@ -225,7 +232,7 @@ picture {
   z-index: 2;
 }
 .mobile-nav-list {
-  width: 93%;
+  width: 93.5%;
   height: 20rem;
   list-style: none;
   margin: 0 auto;
@@ -248,12 +255,17 @@ picture {
 }
 .mobile-nav-link {
   width: 100%;
-  height: 3.25rem;
+  height: 100%;
   color: var(--dark-text-color);
+  border-radius: inherit;
   text-decoration: none;
   text-align: center;
   padding: 1.025rem 0;
   font-weight: 700;
+}
+.mobile-nav-link:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 0px;
 }
 .mobile-nav-active-link {
   color: var(--light-primary-color);
@@ -301,7 +313,7 @@ picture {
   text-align: center;
   margin-bottom: 1.563rem;
 }
-.about-main-heading, .skills-main-heading, .skills-section-heading, .projects-main-heading, .project-main-sub-heading, .projects-extras-heading, .contact-heading, .contact-info-section-heading, .contact-social-heading, .contact-message-heading, .footer-heading {
+.about-main-heading, .skills-main-heading, .skills-section-heading, .projects-main-heading, .project-main-sub-heading, .projects-extras-heading, .contact-heading, .contact-info-section-heading, .contact-social-heading, .contact-message-heading, .footer-heading, .modal-box-heading {
   text-align: center;
   margin: 1.563rem 0;
 }
@@ -327,11 +339,11 @@ picture {
   font-size: 1rem;
   font-weight: 400;
 }
-.hero-paragraph, .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .skills-extras-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .projects-extras-paragraph, .contact-paragraph, .footer-paragraph {
+.hero-paragraph, .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .skills-extras-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .projects-extras-paragraph, .contact-paragraph, .footer-paragraph, .modal-box-paragraph {
   text-align: center;
   margin-bottom: 1.563rem;
 }
-.about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph {
+.about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph, .modal-box-paragraph {
   color: var(--dark-background-color);
 } 
 .about-extras-paragraph {
@@ -353,26 +365,26 @@ picture {
 .hero-link-buttons, .about-link-buttons, .projects-link-buttons {
   margin-top: 0.625rem;
 }
-.about-link-buttons, .projects-link-buttons, .contact-link-buttons, .contact-message-link-buttons {
+.about-link-buttons, .projects-link-buttons, .contact-link-buttons, .contact-message-link-buttons, .close-modal-link-buttons {
   margin-bottom: 2.031rem;
 }
 .link-button-background {
   width: 90%;
-  height: 3.25rem;
+  height: auto;
   border: 3px solid transparent;
   transition: all 0.3s ease;
   display: flex; 
   justify-content: center;
   align-items: center; 
 }
-.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background {
+.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background, .close-modal-button-background {
   background-color: var(--light-primary-color);
 }
 .contact-link-background, .source-link-background, .linkedin-link-background {
   background-color: var(--light-background-color);
   border-color: var(--light-primary-color);
 }
-.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message, .close-modal {
   width: 100%;
   height: 3.25rem;
   background-color: transparent;
@@ -386,19 +398,23 @@ picture {
   justify-content: center;
   align-items: center;
 }
-.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message {
+.about-link:focus, .contact-link:focus, .resume-link:focus, .preview-link:focus, .source-link:focus, .github-projects-link:focus, .github-link:focus, .linkedin-link:focus, .send-message:focus, .close-modal:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 2px;
+}
+.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message, .close-modal {
   color: var(--light-background-color);
 }
 .contact-link, .source-link, .linkedin-link {
   color: var(--light-primary-color);
 }
-.about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered {
+.about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered, .close-modal-button-background-hovered {
   border-color: var(--light-primary-active-color);
 }
 .contact-link-background-hovered, .source-link-background-hovered, .linkedin-link-background-hovered {
   border-color: var(--light-primary-active-color);
 }
-.about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active {
+.about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active, .close-modal-button-background-active {
   background-color: var(--light-background-color);
   border-color: var(--light-primary-color);
 }
@@ -406,11 +422,17 @@ picture {
   background-color: var(--light-primary-color);
   border-color: var(--light-primary-color);
 }
-.about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active {
+.about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active, .close-modal-active {
   color: var(--light-primary-color);
 }
 .contact-link-active, .source-link-active, .linkedin-link-active {
   color: var(--light-background-color);
+}
+.disabled-link-button {
+  opacity: 0.5;
+}
+.send-message[disabled] {
+  cursor: not-allowed;
 }
 .about-extras-info {
   width: 100%;
@@ -491,7 +513,7 @@ picture {
 }
 .react-progress {
   width: 10%;
-  background-color: #00d8ff;
+  background-color: #00D8FF;
 }
 .vscode-progress {
   width: 85%;
@@ -507,12 +529,12 @@ picture {
 }
 .figma-progress {
   width: 50%;
-  background-color: #A259FF;
+  background-color: #FF0069;
 }
 .learnings {
   width: 9.375rem;
   height: 3.25rem;
-  background-color: var(--light-background-color);
+  background-color: var(--light-hover-color);
   border-radius: 40px;
   border: 1px solid var(--light-primary-color);
   display: flex;
@@ -583,17 +605,41 @@ picture {
   color: var(--dark-text-color);
   resize: none;
   border-radius: 5px;
-  border: 1px solid var(--dark-text-color);
+  border: 1px solid var(--light-border-color);
   font-family: Montserrat;
   font-size: 1rem;
-  margin-bottom: 1.563rem;
+  display: block;
+  /* margin-bottom: 1.563rem; */
+  margin-bottom: 0.313rem;
 }
+.form-fields:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 0px;
+}  
 .name-field, .email-field {
   padding-left: 0.625rem;
 }
 .message-field {
   height: 12.5rem;
   padding: 0.625rem;
+  /* margin-bottom: 0; */
+}
+.error-message {
+  width: 100%;
+  height: 2rem;
+  color: #B30000;
+  visibility: hidden;
+  display: block;
+  margin-bottom: 0.313rem;
+}
+.valid-input {
+  border-color: #00B362;
+}
+.invalid-input {
+  border-color: #B30000;
+}
+.visible {
+  visibility: visible;
 }
 .footer{
   width: 100%;
@@ -616,9 +662,46 @@ picture {
   border-top: 0px solid var(--dark-hover2-color);
   margin-bottom: 1.563rem;
 }
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-box {
+  width: 90%;
+  height: auto;
+  background-color: var(--light-background-color);
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  padding: 0.625rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+}
 .hide {
   display: none;
 }
+
+/* @media only screen and (min-width: 375px) {
+  
+}
+
+@media only screen and (min-width: 540px) {
+  
+} 
+
+@media only screen and (min-width: 768px) {
+  
+} */
 
 @media only screen and (min-width: 1024px) {
   .menu-background, .close-background {
@@ -655,10 +738,20 @@ picture {
     background-color: var(--light-hover2-color);
   }
   .desktop-nav-link {
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     color: var(--dark-hover-color);
+    border-radius: inherit;
     text-decoration: none;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop-nav-link:focus {
+    outline: 1px solid var(--dark-text-color);
+    outline-offset: 0px;
   }
   .desktop-nav-active-link {
     color: var(--light-primary-color);
@@ -702,6 +795,9 @@ picture {
   .active-icon {
     background-color: var(--dark-hover2-color);
   }
+  .home-link:focus, .open-menu-button:focus, .close-menu-button:focus {
+    outline-color: var(--light-background-color);
+  }
   .desktop-nav-active-item {
     background-color: var(--dark-hover-color);
   }
@@ -710,6 +806,9 @@ picture {
   }
   .desktop-nav-link {
     color: var(--light-background-color);
+  }
+  .desktop-nav-link:focus {
+    outline-color: 1px solid var(--light-background-color);
   }
   .desktop-nav-active-link {
     color: var(--dark-primary-color);
@@ -725,6 +824,9 @@ picture {
   }
   .mobile-nav-link {
     color: var(--light-background-color);
+  }
+  .mobile-nav-link:focus {
+    outline-color: var(--light-background-color);
   }
   .mobile-nav-active-link {
     color: var(--dark-primary-color);
@@ -742,13 +844,13 @@ picture {
   .colored-text {
     color: var(--dark-primary-color);
   }
-  .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph {
+  .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph, .modal-box-paragraph {
     color: var(--light-text-color);
   } 
   .skills-extras-paragraph {
     color: var(--light-background-color);
   }
-  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background {
+  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background, .close-modal-button-background {
     background-color: var(--dark-primary-color);
   }
   .contact-link-background {
@@ -759,19 +861,26 @@ picture {
     background-color: var(--dark-background-color);
     border-color: var(--dark-primary-color);
   }
-  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message {
+  .about-link:focus, .contact-link:focus, .resume-link:focus, .preview-link:focus, .source-link:focus, .github-projects-link:focus, .github-link:focus, .linkedin-link:focus, .send-message:focus, .close-modal:focus {
+    outline-color: var(--light-background-color);
+  }
+  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message, .close-modal {
     color: var(--dark-background-color);
   }
   .contact-link, .source-link, .linkedin-link {
     color: var(--dark-primary-color);
   }
-  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered {
+  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered, .close-modal-button-background-hovered {
     border-color: var(--dark-primary-active-color);
   }
   .contact-link-background-hovered, .source-link-background-hovered, .linkedin-link-background-hovered {
     border-color: var(--dark-primary-active-color);
   }
-  .about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active {
+  .about-link-background-active {
+    background-color: var(--dark-hover-color);
+    border-color: var(--dark-primary-color);
+  }
+  .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active, .close-modal-button-background-active {
     background-color: var(--dark-background-color);
     border-color: var(--dark-primary-color);
   }
@@ -779,7 +888,7 @@ picture {
     background-color: var(--dark-primary-color);
     border-color: var(--dark-primary-color);
   }
-  .about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active {
+  .about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active, .close-modal-active {
     color: var(--dark-primary-color);
   }
   .contact-link-active, .source-link-active, .linkedin-link-active {
@@ -799,31 +908,31 @@ picture {
     background-color: var(--light-hover-color);
   }
   .html-progress {
-    background-color: #e34f26; /* Change maybe needed */
+    background-color: #FF5829;
   }
   .css-progress {
-    background-color: #264de4; /* Change maybe needed */
+    background-color: #436AFF;
   }
   .js-progress {
-    background-color: #F0DB4F; /* Change maybe needed */
+    background-color: #FFDF09;
   }
   .react-progress {
-    background-color: #00d8ff; /* Change maybe needed */
+    background-color: #09D9FF;
   }
   .vscode-progress {
-    background-color: #23A9F2; /* Change maybe needed */
+    background-color: #09A8FF;
   }
   .rwd-progress {
-    background-color: #00D965; /* Change maybe needed */
+    background-color: #09EC73;
   }
   .git-progress {
-    background-color: #F1502F; /* Change maybe needed */
+    background-color: #FF3309;
   }
   .figma-progress {
-    background-color: #A259FF; /* Change maybe needed */
+    background-color: #FF3086;
   }
   .learnings {
-    background-color: var(--dark-hover2-color);
+    background-color: var(--dark-hover-color);
     border: 1px solid var(--dark-primary-color);
   }
   .concept {
@@ -844,6 +953,22 @@ picture {
   .form-fields {
     background-color: var(--dark-background-color);
     color: var(--light-text-color);
-    border: 1px solid var(--light-text-color);
+    border: 1px solid var(--dark-border-color);
+  }
+  .form-fields:focus {
+    outline-color: var(--light-background-color);
+  }  
+  .valid-input {
+  border-color: #87FFB3;
+  }
+  .invalid-input {
+    border-color: #FF8787;
+  }
+  .error-message {
+    color: #FF8787;
+  }
+  .modal-box {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-border-color);
   }
 }

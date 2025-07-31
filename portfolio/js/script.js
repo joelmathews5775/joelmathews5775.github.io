@@ -1,76 +1,158 @@
-import {addheaderShadowOnScroll, setupNavigation, iconEventAnimations, linkEventAnimations} from '../js/functions.js';
+// import {addheaderShadowOnScroll, setupNavigation, iconEventAnimations, linkEventAnimations, enableSendButton, disableSendButton, validateName, validateEmail} from '../js/functions.js';
+
+import * as siteFunctions from '../js/functions.js';
 
 const header = document.querySelector('.header');
-addheaderShadowOnScroll(header, 'header-bottom-shadow');
+siteFunctions.addheaderShadowOnScroll(header);
 
 const homeLink = document.querySelector('.home-link');
-iconEventAnimations('headerIconLink', homeLink, 'active-icon');
+siteFunctions.iconEventAnimations('headerIconLink', homeLink, 'active-icon');
 
+const mobileNavMenu = document.querySelector('.mobile-nav');
 const openMenuButton = document.querySelector('.open-menu-button');
 const closeMenuButton = document.querySelector('.close-menu-button');
-const mobileNavMenu = document.querySelector('.mobile-nav');
-iconEventAnimations('headerIconButton', openMenuButton, 'active-icon', mobileNavMenu, 'hide', closeMenuButton, undefined, 100);
-iconEventAnimations('headerIconButton', closeMenuButton, 'active-icon', mobileNavMenu, 'hide', undefined, openMenuButton, 100);
+siteFunctions.iconEventAnimations('headerIconButton', openMenuButton, 'active-icon', mobileNavMenu, closeMenuButton, undefined, 100);
+siteFunctions.iconEventAnimations('headerIconButton', closeMenuButton, 'active-icon', mobileNavMenu, undefined, openMenuButton, 100);
 
 const sections = document.querySelectorAll('section');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 const desktopNavLinks = document.querySelectorAll('.desktop-nav-link');
-setupNavigation('mobile', sections, 80, mobileNavLinks, 'mobile-nav-active-item', 'mobile-nav-active-link', closeMenuButton, openMenuButton, 'hide', mobileNavMenu, 800);
-setupNavigation('desktop',sections, 80, desktopNavLinks, 'desktop-nav-active-item', 'desktop-nav-active-link');
+siteFunctions.setupNavigation('mobile', sections, 80, mobileNavLinks, 'mobile-nav-active-item', 'mobile-nav-active-link', closeMenuButton, openMenuButton, 'hide', mobileNavMenu, 800);
+siteFunctions.setupNavigation('desktop',sections, 80, desktopNavLinks, 'desktop-nav-active-item', 'desktop-nav-active-link');
 desktopNavLinks.forEach(link => {
-  iconEventAnimations('desktopNavLink', link, 'desktop-nav-focused-item');
+  siteFunctions.iconEventAnimations('desktopNavLink', link, 'desktop-nav-focused-item', undefined, undefined, undefined, undefined);
 });
 
 const aboutLinkButton = document.querySelector('.about-link');
 const aboutLightLinkIcon = document.querySelector('.light-down-arrow-icon');
 const aboutDarkLinkIcon = document.querySelector('.dark-down-arrow-icon');
-linkEventAnimations(aboutLinkButton, undefined, aboutLightLinkIcon, undefined, 'blue', 'about-link-background-hovered', 'about-link-background-active', 'about-link-active', 250);
-linkEventAnimations(aboutLinkButton, undefined, aboutDarkLinkIcon, undefined, 'green', 'about-link-background-hovered', 'about-link-background-active', 'about-link-active', 250);
+siteFunctions.linkEventAnimations(aboutLinkButton, undefined, aboutLightLinkIcon, undefined, 'blue', 'about-link-background-hovered', 'about-link-background-active', 'about-link-active', 250);
+siteFunctions.linkEventAnimations(aboutLinkButton, undefined, aboutDarkLinkIcon, undefined, 'green', 'about-link-background-hovered', 'about-link-background-active', 'about-link-active', 250);
 
 const contactLinkButton = document.querySelector('.contact-link');
 const contactLightLinkIcon = document.querySelector('.light-message-icon');
 const contactDarkLinkIcon = document.querySelector('.dark-message-icon');
-linkEventAnimations(contactLinkButton, undefined, contactLightLinkIcon, undefined, 'white', 'contact-link-background-hovered', 'contact-link-background-active', 'contact-link-active', 250);
-linkEventAnimations(contactLinkButton, undefined, contactDarkLinkIcon, undefined, 'black', 'contact-link-background-hovered', 'contact-link-background-active', 'contact-link-active', 250);
+siteFunctions.linkEventAnimations(contactLinkButton, undefined, contactLightLinkIcon, undefined, 'white', 'contact-link-background-hovered', 'contact-link-background-active', 'contact-link-active', 250);
+siteFunctions.linkEventAnimations(contactLinkButton, undefined, contactDarkLinkIcon, undefined, 'black', 'contact-link-background-hovered', 'contact-link-background-active', 'contact-link-active', 250);
 
 const resumeLinkButton = document.querySelector('.resume-link');
 const resumeLightLinkIcon = document.querySelector('.light-download-icon');
 const resumeDarkLinkIcon = document.querySelector('.dark-download-icon');
-linkEventAnimations(resumeLinkButton, undefined, resumeLightLinkIcon, undefined, 'blue', 'resume-link-background-hovered', 'resume-link-background-active', 'resume-link-active', 250);
-linkEventAnimations(resumeLinkButton, undefined, resumeDarkLinkIcon, undefined, 'green', 'resume-link-background-hovered', 'resume-link-background-active', 'resume-link-active', 250);
+siteFunctions.linkEventAnimations(resumeLinkButton, undefined, resumeLightLinkIcon, undefined, 'blue', 'resume-link-background-hovered', 'resume-link-background-active', 'resume-link-active', 250);
+siteFunctions.linkEventAnimations(resumeLinkButton, undefined, resumeDarkLinkIcon, undefined, 'green', 'resume-link-background-hovered', 'resume-link-background-active', 'resume-link-active', 250);
 
 const previewLinkButton = document.querySelectorAll('.preview-link');
 const previewLightLinkIcon = document.querySelectorAll('.light-new-tab-icon');
 const previewDarkLinkIcon = document.querySelectorAll('.dark-new-tab-icon');
-linkEventAnimations(undefined, previewLinkButton, undefined, previewLightLinkIcon, 'blue', 'preview-link-background-hovered', 'preview-link-background-active', 'preview-link-active', 250);
-linkEventAnimations(undefined, previewLinkButton, undefined, previewDarkLinkIcon, 'green', 'preview-link-background-hovered', 'preview-link-background-active', 'preview-link-active', 250);
+siteFunctions.linkEventAnimations(undefined, previewLinkButton, undefined, previewLightLinkIcon, 'blue', 'preview-link-background-hovered', 'preview-link-background-active', 'preview-link-active', 250);
+siteFunctions.linkEventAnimations(undefined, previewLinkButton, undefined, previewDarkLinkIcon, 'green', 'preview-link-background-hovered', 'preview-link-background-active', 'preview-link-active', 250);
 
 const sourceLinkButton = document.querySelectorAll('.source-link');
 const sourceLightLinkIcon = document.querySelectorAll('.light-html-tag-icon');
 const sourceDarkLinkIcon = document.querySelectorAll('.dark-html-tag-icon');
-linkEventAnimations(undefined, sourceLinkButton, undefined, sourceLightLinkIcon, 'white', 'source-link-background-hovered', 'source-link-background-active', 'source-link-active', 250);
-linkEventAnimations(undefined, sourceLinkButton, undefined, sourceDarkLinkIcon, 'black', 'source-link-background-hovered', 'source-link-background-active', 'source-link-active', 250);
+siteFunctions.linkEventAnimations(undefined, sourceLinkButton, undefined, sourceLightLinkIcon, 'white', 'source-link-background-hovered', 'source-link-background-active', 'source-link-active', 250);
+siteFunctions.linkEventAnimations(undefined, sourceLinkButton, undefined, sourceDarkLinkIcon, 'black', 'source-link-background-hovered', 'source-link-background-active', 'source-link-active', 250);
 
 const githubProjectsLinkButton = document.querySelector('.github-projects-link');
 const githubProjectsLightLinkIcon = document.querySelector('.light-github-project-icon');
 const githubProjectsDarkLinkIcon = document.querySelector('.dark-github-project-icon');
-linkEventAnimations(githubProjectsLinkButton, undefined, githubProjectsLightLinkIcon, undefined, 'blue', 'github-projects-link-background-hovered', 'github-projects-link-background-active', 'github-projects-link-active', 250);
-linkEventAnimations(githubProjectsLinkButton, undefined, githubProjectsDarkLinkIcon, undefined, 'green', 'github-projects-link-background-hovered', 'github-projects-link-background-active', 'github-projects-link-active', 250);
+siteFunctions.linkEventAnimations(githubProjectsLinkButton, undefined, githubProjectsLightLinkIcon, undefined, 'blue', 'github-projects-link-background-hovered', 'github-projects-link-background-active', 'github-projects-link-active', 250);
+siteFunctions.linkEventAnimations(githubProjectsLinkButton, undefined, githubProjectsDarkLinkIcon, undefined, 'green', 'github-projects-link-background-hovered', 'github-projects-link-background-active', 'github-projects-link-active', 250);
 
 const githubLinkButton = document.querySelector('.github-link');
 const githubLightLinkIcon = document.querySelector('.light-github-icon');
 const githubDarkLinkIcon = document.querySelector('.dark-github-icon');
-linkEventAnimations(githubLinkButton, undefined, githubLightLinkIcon, undefined, 'blue', 'github-link-background-hovered', 'github-link-background-active', 'github-link-active', 250);
-linkEventAnimations(githubLinkButton, undefined, githubDarkLinkIcon, undefined, 'green', 'github-link-background-hovered', 'github-link-background-active', 'github-link-active', 250);
+siteFunctions.linkEventAnimations(githubLinkButton, undefined, githubLightLinkIcon, undefined, 'blue', 'github-link-background-hovered', 'github-link-background-active', 'github-link-active', 250);
+siteFunctions.linkEventAnimations(githubLinkButton, undefined, githubDarkLinkIcon, undefined, 'green', 'github-link-background-hovered', 'github-link-background-active', 'github-link-active', 250);
 
 const linkedinLinkButton = document.querySelector('.linkedin-link');
 const linkedinLightLinkIcon = document.querySelector('.light-linkedin-icon');
 const linkedinDarkLinkIcon = document.querySelector('.dark-linkedin-icon');
-linkEventAnimations(linkedinLinkButton, undefined, linkedinLightLinkIcon, undefined, 'white', 'linkedin-link-background-hovered', 'linkedin-link-background-active', 'linkedin-link-active', 250);
-linkEventAnimations(linkedinLinkButton, undefined, linkedinDarkLinkIcon, undefined, 'black', 'linkedin-link-background-hovered', 'linkedin-link-background-active', 'linkedin-link-active', 250);
+siteFunctions.linkEventAnimations(linkedinLinkButton, undefined, linkedinLightLinkIcon, undefined, 'white', 'linkedin-link-background-hovered', 'linkedin-link-background-active', 'linkedin-link-active', 250);
+siteFunctions.linkEventAnimations(linkedinLinkButton, undefined, linkedinDarkLinkIcon, undefined, 'black', 'linkedin-link-background-hovered', 'linkedin-link-background-active', 'linkedin-link-active', 250);
 
 const sendButton = document.querySelector('.send-message');
 const sendLightButtonIcon = document.querySelector('.light-send-icon');
 const sendDarkButtonIcon = document.querySelector('.dark-send-icon');
-linkEventAnimations(sendButton, undefined, sendLightButtonIcon, undefined, 'blue', 'send-message-button-background-hovered', 'send-message-button-background-active', 'send-message-active', 250);
-linkEventAnimations(sendButton, undefined, sendDarkButtonIcon, undefined, 'green', 'send-message-button-background-hovered', 'send-message-button-background-active', 'send-message-active', 250);
+siteFunctions.linkEventAnimations(sendButton, undefined, sendLightButtonIcon, undefined, 'blue', 'send-message-button-background-hovered', 'send-message-button-background-active', 'send-message-active', 250);
+siteFunctions.linkEventAnimations(sendButton, undefined, sendDarkButtonIcon, undefined, 'green', 'send-message-button-background-hovered', 'send-message-button-background-active', 'send-message-active', 250);
+
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#message');
+const nameError = document.querySelector('.name-error');
+const emailError = document.querySelector('.email-error');
+const messageError = document.querySelector('.message-error');
+const inputs = [nameInput, emailInput, messageInput];
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+    if (name !== '' && /^[A-Z][a-zA-Z'’\-]*?(?: [A-Z][a-zA-Z'’\-]*?)*$/.test(name) && name.length >= 2 && email !== '' && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) && message !== '' && message.length >= 5) {
+      siteFunctions.enableSendButton(sendButton);
+    } else {
+      siteFunctions.disableSendButton(sendButton);
+    }
+    if (input.id === 'name') {
+      siteFunctions.validateName(name, nameInput, nameError);
+    } else if (input.id === 'email') {
+      siteFunctions.validateEmail(email, emailInput, emailError);
+    } else if (input.id === 'message') {
+      siteFunctions.validateMessage(message, messageInput, messageError);
+    }
+  });
+});
+
+const closeModalButton = document.querySelector('.close-modal');
+const tickLightButtonIcon = document.querySelector('.light-tick-icon');
+const tickDarkButtonIcon = document.querySelector('.dark-tick-icon');
+const overlay = document.querySelector('.overlay');
+siteFunctions.linkEventAnimations(closeModalButton, undefined, tickLightButtonIcon, undefined, 'blue', 'close-modal-button-background-hovered', 'close-modal-button-background-active', 'close-modal-active', 250);
+siteFunctions.linkEventAnimations(closeModalButton, undefined, tickDarkButtonIcon, undefined, 'green', 'close-modal-button-background-hovered', 'close-modal-button-background-active', 'close-modal-active', 250);
+closeModalButton.addEventListener('click', () => {
+  siteFunctions.closeModalBox(overlay, 'hide');
+});
+
+const messageForm = document.querySelector('#message-form');
+messageForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+  let result = siteFunctions.validateForm(name, nameInput, nameError, email, emailInput, emailError, message, messageInput, messageError);
+  if (result !== true) {
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
+    fetch("https://script.google.com/macros/s/AKfycbwhhTKA4hdP_7uYL9fxudi5rN0gHNUpnydEQAgHnGU/dev", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (response.result === "success") {
+        alert("Message sent!");
+        siteFunctions.openModalBox(overlay, 'hide');
+        form.reset();
+        //messageForm.reset();
+        sendButton.blur();
+        siteFunctions.disableSendButton(sendButton);
+        siteFunctions.clearInput(inputs);
+      } else {
+        alert("Something went wrong.");
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Failed to submit.");
+    });
+  }
+});
+
