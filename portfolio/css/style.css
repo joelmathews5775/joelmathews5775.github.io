@@ -140,10 +140,11 @@ picture {
   padding-top: 5rem;
 }
 .hero-section {
-  height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   background-color: var(--light-hover-color);
   color: var(--dark-text-color);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -469,7 +470,7 @@ picture {
   outline: 1px solid var(--dark-text-color);
   outline-offset: 0px;
 }
-.hero-section, .about-section, .skills-section, .projects-section, .contact-section, .modal-box {
+.about-section, .skills-section, .projects-section, .contact-section, .modal-box {
   width: 90%;
   height: auto;
   display: flex;
@@ -627,12 +628,12 @@ picture {
     justify-content: center;
     align-items: center;
   }
+  .desktop-nav-focused-item {
+    background-color: var(--light-hover2-color);
+  }
   .desktop-nav-active-item {
     background-color: var(--light-hover-color);
     border: 1px solid var(--light-primary-color);
-  }
-  .desktop-nav-focused-item {
-    background-color: var(--light-hover2-color);
   }
   .desktop-nav-link {
     width: 100%;
@@ -677,9 +678,37 @@ picture {
     background-color: var(--dark-background-color);
     border: 1px solid var(--dark-primary-color);
   }
+  .mobile-nav-link {
+    color: var(--light-background-color);
+  }
+  .mobile-nav-link:focus {
+    outline-color: var(--light-background-color);
+  }
+  .mobile-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .desktop-nav-focused-item {
+    background-color: var(--dark-hover2-color);
+  }
+  .desktop-nav-active-item {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .desktop-nav-link {
+    color: var(--light-background-color);
+  }
+  .desktop-nav-link:focus {
+    outline-color: var(--light-background-color);
+  }
+  .desktop-nav-active-link {
+    color: var(--dark-primary-color);
+  }
   .hero-section {
     background-color: var(--dark-hover-color);
     color: var(--light-background-color);
+  }
+  .about-extras-info-icon-background {
+    background-color: var(--dark-primary-color);
   }
   .skill-progress-bar {
     background-color: var(--light-hover-color);
@@ -708,6 +737,10 @@ picture {
   .figma-progress {
     background-color: #FF3086;
   }
+  .learnings {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+  }
   .contact-text {
     color: var(--light-hover2-color);
   }
@@ -731,49 +764,58 @@ picture {
   }
 
   /* common styles */
+  .home-link:focus, .open-menu-button:focus, .close-menu-button:focus, .form-fields:focus {
+    outline-color: var(--light-background-color);
+  }
   .header, .about-section, .skills-section, .projects-section, .contact-section {
     background-color: var(--dark-background-color);
   }
   .header-icon-background, .about-extras-container, .skills-extras-container, .projects-extras-container, .email-icon-background, .phone-icon-background, .location-icon-background {
     background-color: var(--dark-hover-color);
   }
-  .home-link:focus, .open-menu-button:focus, .close-menu-button:focus, .desktop-nav-link:focus, .mobile-nav-link:focus, .about-link:focus, .contact-link:focus, .resume-link:focus, .preview-link:focus, .source-link:focus, .github-projects-link:focus, .github-link:focus, .linkedin-link:focus, .send-message:focus, .close-modal:focus, .form-fields:focus {
-    outline-color: var(--light-background-color);
-  }  
-  .active-icon, .desktop-nav-focused-item, .project-preview-image-background {
-    background-color: var(--dark-hover2-color);
-  }
-  .desktop-nav-link, .mobile-nav-link, .skills-extras-paragraph, .skill-percent {
-    color: var(--light-background-color);
-  }
-  .desktop-nav-active-link, .mobile-nav-active-link, .colored-text, .contact-link, .source-link, .linkedin-link, .about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active, .close-modal-active, .concept, .email-id, .phone-no, .location  {
-    color: var(--dark-primary-color);
-  }
-  .desktop-nav-active-item, .learnings {
-    background-color: var(--dark-hover-color);
-    border: 1px solid var(--dark-primary-color);
-  }
-  .project-container, .contact-details-container, .contact-message-container, .skillset-box {
+  .skillset-box, .project-container, .contact-details-container, .contact-message-container {
     border: 1px solid var(--dark-border-color);
     box-shadow: var(--dark-box-shadow);
-  } 
+  }
   .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph, .modal-box-paragraph {
     color: var(--light-text-color);
-  } 
-  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background, .close-modal-button-background, .about-extras-info-icon-background {
+  }
+  .skills-extras-paragraph, .skill-percent {
+    color: var(--light-background-color);
+  }
+  .colored-text, .concept, .email-id, .phone-no, .location  {
+    color: var(--dark-primary-color);
+  }
+  .active-icon, .project-preview-image-background {
+    background-color: var(--dark-hover2-color);
+  }
+  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background, .close-modal-button-background {
     background-color: var(--dark-primary-color);
+  }
+  .contact-link-background {
+    background-color: var(--dark-hover-color);
+    border-color: var(--dark-primary-color);
   }
   .source-link-background, .linkedin-link-background {
     background-color: var(--dark-background-color);
     border-color: var(--dark-primary-color);
   }
-  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message, .close-modal, .contact-link-active, .source-link-active, .linkedin-link-active {
+  .about-link:focus, .contact-link:focus, .resume-link:focus, .preview-link:focus, .source-link:focus, .github-projects-link:focus, .github-link:focus, .linkedin-link:focus, .send-message:focus, .close-modal:focus {
+    outline-color: var(--light-background-color);
+  } 
+  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message, .close-modal {
     color: var(--dark-background-color);
   }
-  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered, .close-modal-button-background-hovered, .contact-link-background-hovered, .source-link-background-hovered, .linkedin-link-background-hovered {
+  .contact-link, .source-link, .linkedin-link {
+    color: var(--dark-primary-color);
+  }
+  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered, .close-modal-button-background-hovered {
     border-color: var(--dark-primary-active-color);
   }
-  .about-link-background-active, .contact-link-background {
+  .contact-link-background-hovered, .source-link-background-hovered, .linkedin-link-background-hovered  {
+    border-color: var(--dark-primary-active-color);
+  }
+  .about-link-background-active {
     background-color: var(--dark-hover-color);
     border-color: var(--dark-primary-color);
   }
@@ -785,7 +827,10 @@ picture {
     background-color: var(--dark-primary-color);
     border-color: var(--dark-primary-color);
   }
-
+  .about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active, .close-modal-active {
+    color: var(--dark-primary-color);
+  }
+  .contact-link-active, .source-link-active, .linkedin-link-active {
+    color: var(--dark-background-color);
+  }
 }
-
-
