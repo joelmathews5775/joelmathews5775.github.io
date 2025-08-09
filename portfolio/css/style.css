@@ -141,7 +141,7 @@ picture {
 }
 .hero-section {
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
   background-color: var(--light-hover-color);
   color: var(--dark-text-color);
   justify-content: center;
@@ -787,4 +787,5 @@ picture {
   }
 
 }
+
 
