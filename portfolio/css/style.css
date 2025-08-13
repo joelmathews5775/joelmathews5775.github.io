@@ -1,0 +1,990 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --light-hover-color: #EFF6FF;
+  --dark-hover-color: #363636;
+  --light-hover2-color: #E1E1E1;
+  --dark-hover2-color:  #505050;
+  --light-background-color: #FFFFFF;
+  --dark-background-color: #202020;
+  --light-text-color: #DADADA;
+  --dark-text-color: #000000;
+  --light-primary-color: #0559A7;
+  --light-primary-active-color: #043A6D;  
+  --dark-primary-color: #01EC70;
+  --dark-primary-active-color: #60FFAA;
+  --light-border-color: #A0A0A0;
+  --dark-border-color: #424242;
+  --light-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  --dark-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.75);
+  --website-font: Montserrat, Arial, sans-serif;
+  --mobile-spacing: 20px;
+  --tablet-spacing: 25px;
+  --desktop-spacing: 30px;
+  --vh: 1vh;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--light-background-color);
+  color: var(--dark-text-color);
+  font-family: var(--website-font);
+  font-size: 1rem;
+  overflow: visible;
+} 
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--light-background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-bottom-shadow {
+  box-shadow: var(--light-box-shadow);
+}
+.header-contents-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header-icon-background {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--light-hover-color);
+  border-radius: 5px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-icon {
+  background-color: var(--light-hover2-color);
+}
+picture {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+.desktop-nav {
+  display: none;
+}
+.mobile-nav {
+  width: 90%;
+  height: auto;
+  background-color: var(--light-hover-color);
+  border: 1px solid var(--light-primary-color);
+  border-radius: 7.5px;
+  box-shadow: var(--light-box-shadow);
+  padding: 0.625rem;
+  position: fixed;
+  top: 5rem;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+}
+.mobile-nav-list {
+  width: 100%;
+  height: auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+}
+.mobile-nav-item {
+  width: 100%;
+  height: 3.25rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-nav-active-item {
+  background-color: var(--light-background-color);
+  border: 1px solid var(--light-primary-color);
+}
+.mobile-nav-link {
+  width: 100%;
+  height: 100%;
+  color: var(--dark-text-color);
+  border-radius: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav-link:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 0px;
+}
+.mobile-nav-active-link {
+  color: var(--light-primary-color);
+}
+.page-section {
+  width: 90%;
+  height: auto;
+  background-color: var(--light-background-color);
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+.hero-section {
+  background-color: var(--light-hover-color);
+  color: var(--dark-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+.hero-heading {
+  text-align: center;
+}
+.strong-text {
+  text-align: center;
+  font-size: 1.185rem;
+  font-weight: 500;
+}
+.colored-text {
+  color: var(--light-primary-color);
+}
+.paragraph {
+  width: 90%;
+  height: auto;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.link-buttons {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.link-button-background {
+  width: 100%;
+  height: auto;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+.about-section {
+  background-color: var(--light-background-color);
+  /* row-gap: var(--mobile-spacing); */
+}
+.heading2 {
+  font-size: 1.95rem;
+  font-weight: 800;
+}
+.about-main-heading {
+  text-align: center;
+}
+.heading3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+.about-extras-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--light-hover-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--mobile-spacing);
+}
+.about-extras-info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--mobile-spacing);
+}
+.about-extras-info-icon-background {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--light-primary-color);
+  border-radius: 5px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.skills-section {
+  background-color: var(--light-background-color);
+}
+.skillset-box {
+  width: 100%;
+  height: auto;
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  box-shadow: var(--light-box-shadow);
+  padding: var(--mobile-spacing) 0;
+} 
+/* .skills-section {
+  align-items: center;
+} */
+/* .skills-section-heading {
+  width: 90%;
+  height: auto;
+} */
+.skill-labels-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.skill-label {
+  font-weight: 800;
+}
+.skill-percent {
+  color: var(--dark-background-color);
+}
+.skill-progress-bar {
+  width: 100%;
+  height: 0.781rem;
+  background-color: var(--light-hover2-color);
+  border-radius: 25px;
+  position: relative;
+}
+.html-progress {
+  width: 85%;
+  background-color: #FF6A00;
+}
+.css-progress {
+  width: 80%;
+  background-color: #4A5FFF;
+}
+.js-progress {
+  width: 70%;
+  background-color: #FFBF1C;
+}
+.react-progress {
+  width: 10%;
+  background-color: #00D8FF;
+}
+.vscode-progress {
+  width: 85%;
+  background-color: #23A9F2;
+}
+.rwd-progress {
+  width: 80%;
+  background-color: #00D965;
+}
+.git-progress {
+  width: 60%;
+  background-color: #FF1500;
+}
+.figma-progress {
+  width: 50%;
+  background-color: #FF0069;
+}
+.skills-extras-container {
+  background-color: var(--light-hover-color);
+}
+.learnings {
+  width: 9.375rem;
+  height: 3.25rem;
+  background-color: var(--light-hover-color);
+  border-radius: 40px;
+  border: 1px solid var(--light-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.concept {
+  color: var(--light-primary-color);
+  font-weight: 700;
+}
+.skills-extras-paragraph {
+  color: var(--dark-text-color);
+}
+.quoted-text {
+  font-style: italic;
+}
+/* .projects-section {
+  background-color: var(--light-background-color);
+}  */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--mobile-spacing);
+}
+.project-details-container {
+  overflow: hidden;
+}
+.project-preview-image-background {
+  width: 100%;
+  height: 20.95rem;
+  background-color: var(--light-hover2-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-details {
+  height: 22.2rem;
+  padding: var(--mobile-spacing) 0;
+  justify-content: center;
+}
+.projects-extras-container {
+  background-color: var(--light-hover-color);
+}
+.contact-section {
+  background-color: var(--light-background-color);
+} 
+.contact-details-container {
+  row-gap: var(--mobile-spacing);
+}
+.contact-text {
+  color: var(--dark-hover2-color);
+  font-size: 1rem;
+}
+.contact-message-container {
+  row-gap: var(--mobile-spacing);
+}
+.message-form {
+  width: 90%;
+  height: auto;
+}
+.form-labels {
+  font-weight: 800;
+  margin-bottom: 5px;
+  display: block;
+}
+.form-fields {
+  width: 100%;
+  height: 3.25rem;
+  background-color: var(--light-background-color);
+  color: var(--dark-text-color);
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid var(--light-border-color);
+  font-family: Montserrat;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+}
+.form-fields:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 0px;
+}  
+.message-field {
+  height: 12.5rem;
+}
+.error-message {
+  width: 100%;
+  height: 2rem;
+  color: #B30000;
+  visibility: hidden;
+  margin-top: 5px;
+  display: block;
+}
+.valid-input {
+  border-color: #00B362;
+}
+.invalid-input {
+  border-color: #B30000;
+}
+.visible {
+  visibility: visible;
+}
+.contact-message-link-buttons {
+  width: 100%;
+}
+.disabled-link-button {
+  opacity: 0.5;
+}
+.send-message[disabled] {
+  cursor: not-allowed;
+}
+.footer {
+  background-color: #090912;
+  color: var(--light-background-color);
+}
+.white-line {
+  width: 90%;
+  border-top: 0px solid var(--dark-hover2-color);
+}
+.footer-icon {
+  vertical-align: sub;
+}
+.footer-picture {
+  display: inline-block;
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-box {
+  background-color: var(--light-background-color);
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  row-gap: var(--mobile-spacing);
+}
+.hide {
+  display: none;
+}
+.full-height-section {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* common styles */
+.home-link, .open-menu-button, .close-menu-button {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: transparent;
+  border-radius: inherit;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-link:focus, .open-menu-button:focus, .close-menu-button:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 0px;
+}
+.about-section, .skills-section, .projects-section, .contact-section, .footer-contents-container, .footer-extras-container, .modal-box {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.hero-contents-container, .about-main-contents-container, .skills-main-contents-container, .skillsets-container, .frontend-skillset, .tools-workflows-skillset, .skills-extras-container, .learning-container, .projects-contents-container, .project-details, .projects-extras-container, .contact-contents-container, .contact-container, .contact-email-container, .email-details, .contact-phone-container, .phone-details, .contact-location-container, .location-details, .social-container, .footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  row-gap: var(--mobile-spacing);
+}
+.project-details-container, .contact-details-container, .contact-message-container {
+  width: 100%;
+  height: auto;
+  border-radius: 7.5px;
+  border: 1px solid var(--light-border-color);
+  box-shadow: var(--light-box-shadow);
+  display: flex;
+  flex-direction: column;
+}
+.hero-contents-container, .about-main-contents-container, .skills-main-contents-container, .skillsets-container, .frontend-skillset, .tools-workflows-skillset, .skills-extras-container, .learning-container, .projects-contents-container, .project-details, .projects-extras-container, .contact-contents-container, .contact-container, .contact-details-container, .contact-message-container, .contact-email-container, .email-details, .contact-phone-container, .phone-details, .contact-location-container, .location-details, .social-container, .footer, .footer-contents-container, .footer-extras-container, .modal-box {
+  align-items: center;
+}
+.about-main-contents-container, .about-extras-container, .skills-main-contents-container, .skills-extras-container, .projects-contents-container, .projects-extras-container, .contact-contents-container, .contact-details-container, .contact-message-container, .footer, .modal-box {
+  padding: var(--mobile-spacing) 0;
+}
+.about-main-sub-heading, .about-extras-heading, .skills-main-heading, .skills-section-heading, .projects-main-heading, .project-main-sub-heading, .projects-extras-heading, .contact-heading, .contact-info-section-heading, .contact-text, .contact-social-heading, .contact-message-heading, .footer-heading, .modal-box-heading {
+  text-align: center;
+}
+.about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph, .modal-box-paragraph  {
+  color: var(--dark-background-color);
+  text-align: center;
+}
+.hero-paragraph, .about-extras-paragraph, .skills-extras-paragraph, .projects-extras-paragraph, .footer-paragraph {
+  text-align: center;
+} 
+.hero-link-buttons, .projects-link-buttons, .contact-link-buttons {
+  row-gap: var(--mobile-spacing);
+}
+.about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background, .close-modal-button-background {
+  background-color: var(--light-primary-color);
+}
+.contact-link-background, .source-link-background, .linkedin-link-background {
+  background-color: var(--light-background-color);
+  border-color: var(--light-primary-color);
+}
+.about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message, .close-modal {
+  width: 100%;
+  height: 3.25rem;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-link:focus, .contact-link:focus, .resume-link:focus, .preview-link:focus, .source-link:focus, .github-projects-link:focus, .github-link:focus, .linkedin-link:focus, .send-message:focus, .close-modal:focus {
+  outline: 1px solid var(--dark-text-color);
+  outline-offset: 2px;
+}
+.about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message, .close-modal {
+  color: var(--light-background-color);
+}
+.contact-link, .source-link, .linkedin-link {
+  color: var(--light-primary-color);
+}
+.about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered, .close-modal-button-background-hovered {
+  border-color: var(--light-primary-active-color);
+}
+.contact-link-background-hovered, .source-link-background-hovered, .linkedin-link-background-hovered {
+  border-color: var(--light-primary-active-color);
+}
+.about-link-background-active, .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active, .close-modal-button-background-active {
+  background-color: var(--light-background-color);
+  border-color: var(--light-primary-color);
+}
+.contact-link-background-active, .source-link-background-active, .linkedin-link-background-active {
+  background-color: var(--light-primary-color);
+  border-color: var(--light-primary-color);
+}
+.about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active, .close-modal-active {
+  color: var(--light-primary-color);
+}
+.contact-link-active, .source-link-active, .linkedin-link-active {
+  color: var(--light-background-color);
+}
+.html-skill, .css-skill, .js-skill, .react-skill, .vscode-skill, .rwd-skill, .git-skill, .figma-skill {
+  width: 85%;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.html-progress, .css-progress, .js-progress, .react-progress, .vscode-progress, .rwd-progress ,.git-progress, .figma-progress {
+  height: 0.781rem;
+  border-radius: 25px;
+  position: absolute;
+}
+.email-icon-background, .phone-icon-background, .location-icon-background {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: var(--light-hover-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-label, .contact-detail {
+  text-align: center;
+  font-size: 1rem;
+}
+.contact-label, .contact-detail {
+  font-weight: 800;
+}
+.email-id, .phone-no, .location  {
+  color: var(--light-primary-color);
+}
+.footer-contents-container, .footer-extras-container {
+  row-gap: var(--mobile-spacing);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-extras-container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+    gap: var(--tablet-spacing);
+  }
+  .skillsets-container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: var(--tablet-spacing);
+  }
+  .skillset-box {
+    width: 50%;
+    row-gap: var(--tablet-spacing);
+  }
+  .learning-container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: var(--tablet-spacing);
+  }
+  .project-details-container {
+    flex-direction: row;
+  }
+  .projects-link-buttons {
+    row-gap: var(--tablet-spacing);
+  }
+  .message-form {
+    width: 50%;
+  }
+  .footer-extras-container {
+    flex-direction: row;
+  }
+  .experience {
+    align-self: start;
+    text-align: left;
+  }
+  .copyright {
+    align-self: end;
+    text-align: right;
+  }
+
+  /* common styles */
+  .hero-contents-container, .about-main-contents-container, .skills-main-contents-container, .skills-extras-container, .projects-contents-container, .projects-container, .project-details, .projects-extras-container, .contact-contents-container, .contact-details-container, .email-details, .phone-details, .location-details, .social-container, .contact-message-container, .footer, .footer-contents-container, .modal-box {
+    row-gap: var(--tablet-spacing);
+  }
+  .about-main-contents-container, .about-extras-container, .skills-main-contents-container, .skillset-box, .skills-extras-container, .projects-contents-container, .project-details, .projects-extras-container, .contact-contents-container, .contact-details-container, .contact-message-container, .footer, .modal-box {
+    padding: var(--tablet-spacing) 0;
+  }
+  .hero-link-buttons, .contact-link-buttons {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: var(--tablet-spacing);
+  }
+  .about-link-background, .contact-link-background, .resume-link-background, .preview-link-background, .source-link-background, .github-projects-link-background, .github-link-background, .linkedin-link-background, .send-message-button-background, .close-modal-button-background {
+    width: 15.625rem;
+  }
+  .project-preview-image-background, .project-details {
+    width: 50%;
+    /* height: 23.35rem; */
+    height: 23.663rem;
+  }
+  .contact-email-container, .contact-phone-container, .contact-location-container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: var(--tablet-spacing);
+  }
+  .email-details, .phone-details, .location-details {
+    width: 16.163rem;
+    align-items: flex-start;
+  }
+} 
+
+@media only screen and (min-width: 1024px) {
+  .menu-background, .close-background {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    width: 80%;
+    height: auto;
+    display: block;
+  }
+  .desktop-nav-list {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .desktop-nav-item {
+    /* width: 9.375rem; */
+    width: 15%;
+    height: 3.25rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop-nav-focused-item {
+    background-color: var(--light-hover2-color);
+  }
+  .desktop-nav-active-item {
+    background-color: var(--light-hover-color);
+    border: 1px solid var(--light-primary-color);
+  }
+  .desktop-nav-link {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--dark-hover-color);
+    border-radius: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop-nav-link:focus {
+    outline: 1px solid var(--dark-text-color);
+    outline-offset: 0px;
+  }
+  .desktop-nav-active-link {
+    color: var(--light-primary-color);
+  }
+  .skillsets-container {
+    column-gap: var(--desktop-spacing);
+  }
+  .skillset-box {
+    row-gap: var(--desktop-spacing);
+  }
+  .learning-container {
+    column-gap: var(--desktop-spacing);
+  }
+  .message-form {
+    width: 70%;
+  }
+  .message-field {
+    height: 18.75rem;
+  }
+
+  /* common styles */
+  .about-link, .contact-link, .resume-link, .preview-link, .source-link, .github-projects-link, .github-link, .linkedin-link, .send-message {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .hero-contents-container, .about-main-contents-container, .skills-main-contents-container, .skills-extras-container, .projects-contents-container, .projects-container, .project-details, .projects-extras-container, .contact-contents-container, .contact-details-container, .email-details, .phone-details, .location-details, .social-container, .contact-message-container, .footer, .footer-contents-container, .modal-box {
+    row-gap: var(--desktop-spacing);
+  }
+  .about-main-contents-container, .about-extras-container, .skills-main-contents-container, .skillset-box, .skills-extras-container, .projects-contents-container, .project-details, .projects-extras-container, .contact-contents-container, .contact-details-container, .contact-message-container, .footer, .modal-box {
+    padding: var(--desktop-spacing) 0;
+  }
+  .hero-link-buttons {
+    column-gap: var(--desktop-spacing);
+  }
+  .projects-link-buttons, .contact-link-buttons {
+    flex-direction: column;
+    row-gap: var(--desktop-spacing);
+  }
+  .about-link-background, .contact-link-background, .resume-link-background, .preview-link-background, .source-link-background, .github-projects-link-background, .github-link-background, .linkedin-link-background, .send-message-button-background, .close-modal-button-background {
+    width: 18.75rem;
+  }
+  /* .project-preview-image-background, .project-details {
+    width: 50%;
+    height: 23.35rem;
+  } */
+  .contact-container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: var(--desktop-spacing);
+  }
+  .contact-details-container, .contact-message-container {
+    width: 50%;
+    /* height: 42.325rem; */
+    height: 47.75rem;
+  }
+  .contact-email-container, .contact-phone-container, .contact-location-container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: var(--desktop-spacing);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+   .about-extras-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--desktop-spacing);
+  }
+  .about-extras-info {
+    width: 25%;
+  }
+  .projects-link-buttons {
+    flex-direction: row;
+    column-gap: var(--desktop-spacing);
+  }
+  .message-field {
+    height: 13.25rem;
+  }
+  .contact-link-buttons {
+    flex-direction: row;
+    column-gap: var(--desktop-spacing);
+  }
+
+  /* common styles */
+  .contact-details-container, .contact-message-container {
+    width: 50%;
+    height: 42.325rem;
+  }
+} 
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-background-color);
+    color: var(--light-background-color);
+  }
+  .header-bottom-shadow {
+    box-shadow: var(--dark-box-shadow);
+  }
+  .mobile-nav {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .mobile-nav-active-item {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .mobile-nav-link {
+    color: var(--light-background-color);
+  }
+  .mobile-nav-link:focus {
+    outline-color: var(--light-background-color);
+  }
+  .mobile-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .desktop-nav-focused-item {
+    background-color: var(--dark-hover2-color);
+  }
+  .desktop-nav-active-item {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .desktop-nav-link {
+    color: var(--light-background-color);
+  }
+  .desktop-nav-link:focus {
+    outline-color: var(--light-background-color);
+  }
+  .desktop-nav-active-link {
+    color: var(--dark-primary-color);
+  }
+  .hero-section {
+    background-color: var(--dark-hover-color);
+    color: var(--light-background-color);
+  }
+  .about-extras-info-icon-background {
+    background-color: var(--dark-primary-color);
+  }
+  .skill-progress-bar {
+    background-color: var(--light-hover-color);
+  }
+  .html-progress {
+    background-color: #FF5829;
+  }
+  .css-progress {
+    background-color: #436AFF;
+  }
+  .js-progress {
+    background-color: #FFDF09;
+  }
+  .react-progress {
+    background-color: #09D9FF;
+  }
+  .vscode-progress {
+    background-color: #09A8FF;
+  }
+  .rwd-progress {
+    background-color: #09EC73;
+  }
+  .git-progress {
+    background-color: #FF3309;
+  }
+  .figma-progress {
+    background-color: #FF3086;
+  }
+  .learnings {
+    background-color: var(--dark-hover-color);
+    border: 1px solid var(--dark-primary-color);
+  }
+  .contact-text {
+    color: var(--light-hover2-color);
+  }
+  .form-fields {
+    background-color: var(--dark-background-color);
+    color: var(--light-text-color);
+    border: 1px solid var(--dark-border-color);
+  }
+  .valid-input {
+  border-color: #87FFB3;
+  }
+  .invalid-input {
+    border-color: #FF8787;
+  }
+  .error-message {
+    color: #FF8787;
+  }
+  .modal-box {
+    background-color: var(--dark-background-color);
+    border: 1px solid var(--dark-border-color);
+  }
+
+  /* common styles */
+  .home-link:focus, .open-menu-button:focus, .close-menu-button:focus, .form-fields:focus {
+    outline-color: var(--light-background-color);
+  }
+  .header, .about-section, .skills-section, .projects-section, .contact-section {
+    background-color: var(--dark-background-color);
+  }
+  .header-icon-background, .about-extras-container, .skills-extras-container, .projects-extras-container, .email-icon-background, .phone-icon-background, .location-icon-background {
+    background-color: var(--dark-hover-color);
+  }
+  .skillset-box, .project-details-container, .contact-details-container, .contact-message-container {
+    border: 1px solid var(--dark-border-color);
+    box-shadow: var(--dark-box-shadow);
+  }
+  .about-main-paragraph, .about-main-sub-paragraphs, .skills-main-paragraph, .projects-main-paragraph, .project-main-sub-paragraph, .contact-paragraph, .modal-box-paragraph {
+    color: var(--light-text-color);
+  }
+  .skills-extras-paragraph, .skill-percent {
+    color: var(--light-background-color);
+  }
+  .colored-text, .concept, .email-id, .phone-no, .location  {
+    color: var(--dark-primary-color);
+  }
+  .active-icon, .project-preview-image-background {
+    background-color: var(--dark-hover2-color);
+  }
+  .about-link-background, .resume-link-background, .preview-link-background, .github-projects-link-background, .github-link-background, .send-message-button-background, .close-modal-button-background {
+    background-color: var(--dark-primary-color);
+  }
+  .contact-link-background {
+    background-color: var(--dark-hover-color);
+    border-color: var(--dark-primary-color);
+  }
+  .source-link-background, .linkedin-link-background {
+    background-color: var(--dark-background-color);
+    border-color: var(--dark-primary-color);
+  }
+  .about-link:focus, .contact-link:focus, .resume-link:focus, .preview-link:focus, .source-link:focus, .github-projects-link:focus, .github-link:focus, .linkedin-link:focus, .send-message:focus, .close-modal:focus {
+    outline-color: var(--light-background-color);
+  } 
+  .about-link, .resume-link, .preview-link, .github-projects-link, .github-link, .send-message, .close-modal {
+    color: var(--dark-background-color);
+  }
+  .contact-link, .source-link, .linkedin-link {
+    color: var(--dark-primary-color);
+  }
+  .about-link-background-hovered, .resume-link-background-hovered, .preview-link-background-hovered, .github-projects-link-background-hovered, .github-link-background-hovered, .send-message-button-background-hovered, .close-modal-button-background-hovered {
+    border-color: var(--dark-primary-active-color);
+  }
+  .contact-link-background-hovered, .source-link-background-hovered, .linkedin-link-background-hovered  {
+    border-color: var(--dark-primary-active-color);
+  }
+  .about-link-background-active {
+    background-color: var(--dark-hover-color);
+    border-color: var(--dark-primary-color);
+  }
+  .resume-link-background-active, .preview-link-background-active, .github-projects-link-background-active, .github-link-background-active, .send-message-button-background-active, .close-modal-button-background-active {
+    background-color: var(--dark-background-color);
+    border-color: var(--dark-primary-color);
+  }
+  .contact-link-background-active, .source-link-background-active, .linkedin-link-background-active {
+    background-color: var(--dark-primary-color);
+    border-color: var(--dark-primary-color);
+  }
+  .about-link-active, .resume-link-active, .preview-link-active, .github-projects-link-active, .github-link-active, .send-message-active, .close-modal-active {
+    color: var(--dark-primary-color);
+  }
+  .contact-link-active, .source-link-active, .linkedin-link-active {
+    color: var(--dark-background-color);
+  }
+}
