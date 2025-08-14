@@ -196,7 +196,7 @@ export function displayProjects(projectContainer, projects) {
               </a>
             </div>
             <div class="link-button-background source-link-background">
-              <a href="${project.sourceLink}" class="source-link">
+              <a href="${project.sourceLink}" download class="source-link">
                 <picture class="picture">
                   <source srcset="img/code_24x22_green.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" class="dark-html-tag-icon">
                   <img src="img/code_24x22_blue.svg" alt="HTML tag icon." style="width: 18.5px; height: 16.94px;" class="light-html-tag-icon">
@@ -334,4 +334,5 @@ export function openModalBox(overLayElement, cssHideClass) {
 export function closeModalBox(overLayElement, cssHideClass) {
   overLayElement.classList.add(cssHideClass);
   document.body.style.overflow = 'visible';
+
 }
